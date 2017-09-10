@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "STONWriter",
+	"category" : "MonticelloTonel-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"aliases"
+	],
+	"name" : "TonelSTONWriter",
+	"type" : "normal"
+}
