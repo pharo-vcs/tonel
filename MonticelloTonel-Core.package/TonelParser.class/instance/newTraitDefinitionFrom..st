@@ -1,15 +1,21 @@
 private factory
 newTraitDefinitionFrom: anArray
-	| metadata |
+	| metadata traitDefs |
 	metadata := anArray sixth.
-	^ { 
-	MCTraitDefinition
-		name: (metadata at: #name)
-		traitComposition: (metadata at: 'traitcomposition' ifAbsent: [ '{}' ])
-		category: (metadata at: #category)
-		comment: anArray second
-		commentStamp: nil. 
-	MCClassTraitDefinition
- 		baseTraitName: (metadata at: #name)
- 		classTraitComposition: (metadata at: #classTraits).
-	}.
+	
+	traitDefs := { 
+		MCTraitDefinition
+			name: (metadata at: #name)
+			traitComposition: (metadata at: 'traitcomposition' ifAbsent: [ '{}' ])
+			category: (metadata at: #category)
+			comment: anArray second
+			commentStamp: nil }.
+			
+	metadata 
+		at: #classTraits
+		ifPresent: [ :classTraits |
+			traitDefs := traitDefs copyWith: (MCClassTraitDefinition
+ 				baseTraitName: (metadata at: #name)
+ 				classTraitComposition: classTraits) ].
+			
+	^ traitDefs
