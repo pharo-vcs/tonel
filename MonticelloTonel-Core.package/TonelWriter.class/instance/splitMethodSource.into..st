@@ -14,7 +14,7 @@ splitMethodSource: aMethodDefinition into: aBlock
 			declaration originalContents 
 			includesSubstring: each 
 			caseSensitive: true ]) not
-		or: [ declaration contents trimRight last = $: ] ]
+		or: [ ':+-/\*~<>=@,%|&?!' includes: declaration contents trimRight last ] ]
 	whileTrue: [ 
 		"get separators"
 		[ source atEnd not and: [ source peek isSeparator ] ]

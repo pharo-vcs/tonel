@@ -41,3 +41,23 @@ Object class >> selector [
 	^ 42
 ]
 ' withLineEndings: OSPlatform current lineEnding).
+
+
+	stream := String new writeStream.
+	def := MCMethodDefinition 
+		className: #Object
+		classIsMeta: false
+		selector: #=
+		category: 'comparing' 
+		timeStamp: nil
+		source: '= anObject
+	^ self == anObject'.
+	writer writeMethodDefinition: def on: stream. 
+	self 
+		assert: stream contents 
+		equals: ('
+{ #category : #comparing }
+Object >> = anObject [
+	^ self == anObject
+]
+' withLineEndings: OSPlatform current lineEnding).
