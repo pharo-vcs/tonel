@@ -1,11 +1,11 @@
 {
 	"commentStamp" : "",
-	"super" : "MCTestCase",
+	"super" : "MCDirectoryRepositoryTest",
 	"category" : "MonticelloTonel-Tests",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "TonelWriterTest",
+	"name" : "TonelRepositoryTest",
 	"type" : "normal"
 }

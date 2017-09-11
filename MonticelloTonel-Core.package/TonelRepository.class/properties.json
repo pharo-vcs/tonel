@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "EstebanLorenzano 9/11/2017 16:49",
+	"super" : "MCDirectoryRepository",
+	"category" : "MonticelloTonel-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "TonelRepository",
+	"type" : "normal"
+}
