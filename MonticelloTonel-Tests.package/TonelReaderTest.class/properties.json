@@ -6,6 +6,6 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "TonelParserTest",
+	"name" : "TonelReaderTest",
 	"type" : "normal"
 }

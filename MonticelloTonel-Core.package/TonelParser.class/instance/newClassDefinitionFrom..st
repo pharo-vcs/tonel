@@ -14,5 +14,5 @@ newClassDefinitionFrom: anArray
 		poolDictionaryNames: (metadata at: 'pools' ifAbsent: [ #() ])
 		classInstVarNames: (metadata at: 'classInstVars' ifAbsent: [ #() ])
 		type: (metadata at: #type ifAbsent: [ #normal ]) asSymbol
-		comment: anArray second
+		comment: (anArray second ifNil: [ '' ])
 		commentStamp: nil
