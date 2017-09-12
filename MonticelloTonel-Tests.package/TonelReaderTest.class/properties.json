@@ -1,13 +1,11 @@
 {
-	"classtraitcomposition" : "TTonelTest classTrait",
+	"commentStamp" : "",
+	"super" : "MCTestCase",
+	"category" : "MonticelloTonel-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
 	"name" : "TonelReaderTest",
-	"commentStamp" : "",
-	"super" : "MCTestCase",
-	"traitcomposition" : "TTonelTest",
-	"type" : "normal",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"category" : "MonticelloTonel-Tests"
+	"type" : "normal"
 }
