@@ -2,16 +2,14 @@ loading
 loadDefinitions
 	| definitionOrders newDefinitions newCategories organization |
 	
-	definitionOrders := Dictionary newFromPairs: { 
-		MCOrganizationDefinition. 	0.
-		MCMethodDefinition. 			1.
-		MCClassDefinition. 			2.
-		MCTraitDefinition. 			2.
-		MCClassTraitDefinition. 		2 }.
+	definitionOrders := self class definitionOrders.
 				
-	newDefinitions := (self packageDirectory children
-		select: [ :each | self canBeLoaded: each ] 
-		thenCollect: [ :each | each readStreamDo: [ :s | (TonelParser on: s) start ] ])
+	newDefinitions := ((self packageDirectory children
+		select: [ :each | self canBeLoaded: each ]) 
+		collect: [ :each | 
+			self fileUtils 
+				readStreamFor: each 
+				do: [ :s | (TonelParser on: s) start ] ])
 		flattened
 		sort: [ :a :b | (definitionOrders at: a class) < (definitionOrders at: b class) ].
 

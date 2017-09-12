@@ -1,3 +1,3 @@
 private
-canBeLoaded: aFileReference 
-	^ aFileReference extension = 'st'
+canBeLoaded: aFileReference
+	^ (self fileUtils fileName: aFileReference) endsWith: '.st'
