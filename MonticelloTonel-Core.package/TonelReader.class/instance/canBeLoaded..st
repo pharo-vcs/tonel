@@ -1,3 +1,5 @@
 private
 canBeLoaded: aFileReference
-	^ (self fileUtils fileName: aFileReference) endsWith: '.st'
+	| fileName |
+	fileName := self fileUtils fileName: aFileReference. 
+	^ fileName ~= 'package.st' and: [ fileName endsWith: '.st' ]
