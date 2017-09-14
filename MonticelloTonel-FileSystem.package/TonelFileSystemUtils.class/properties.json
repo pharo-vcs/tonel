@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "",
 	"super" : "TonelFileUtils",
-	"category" : "MonticelloTonel-Core",
+	"category" : "MonticelloTonel-FileSystem",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
