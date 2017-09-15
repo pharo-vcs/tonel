@@ -8,7 +8,7 @@ newTraitDefinitionFrom: anArray
 			name: (metadata at: #name)
 			traitComposition: (metadata at: 'traitcomposition' ifAbsent: [ '{}' ])
 			category: (metadata at: #category)
-			comment: anArray second
+			comment: (anArray second ifNil: [ '' ])
 			commentStamp: nil }.
 			
 	metadata 
