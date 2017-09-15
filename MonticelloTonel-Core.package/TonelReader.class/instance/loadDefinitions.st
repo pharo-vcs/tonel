@@ -3,13 +3,9 @@ loadDefinitions
 	| definitionOrders newDefinitions newCategories organization |
 	
 	definitionOrders := self class definitionOrders.
-				
-	newDefinitions := ((self packageDirectory children
+	newDefinitions := ((self packageDirectory entries
 		select: [ :each | self canBeLoaded: each ]) 
-		collect: [ :each | 
-			self fileUtils 
-				readStreamFor: each 
-				do: [ :s | (TonelParser on: s) start ] ])
+		collect: [ :each | each readStreamDo: [ :s | TonelParser parseStream: s ] ])
 		flattened
 		sort: [ :a :b | (definitionOrders at: a class) < (definitionOrders at: b class) ].
 
