@@ -7,7 +7,7 @@ Tonel is a file-per-class format for monticello repositories.
 ### Pharo
 
 ```Smalltalk
-Metacelo new 
+Metacello new 
 	repository: 'github://pharo-vcs/tonel';
 	baseline: 'Tonel';
 	load.
