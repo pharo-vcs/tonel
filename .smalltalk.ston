@@ -1,0 +1,9 @@
+SmalltalkCISpec {
+  #specName : 'Tonel',
+  #loading : [
+    SCIMetacelloLoadSpec {
+      #baseline : 'Tonel',
+      #onWarningLog : true
+    }
+  ]
+}
