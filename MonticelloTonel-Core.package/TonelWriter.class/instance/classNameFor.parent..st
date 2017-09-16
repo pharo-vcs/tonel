@@ -5,5 +5,5 @@ classNameFor: aMethodDefinition parent: aClassDefinition
 		ifFalse: [ aMethodDefinition className ]
 		ifTrue: [ 
 			aClassDefinition isTraitDefinition
-				ifFalse: [self className, ' class']
-				ifTrue: [self className, ' classSide'] ]
+				ifFalse: [aMethodDefinition className, ' class']
+				ifTrue: [aMethodDefinition className, ' classSide'] ]
