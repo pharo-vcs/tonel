@@ -1,5 +1,5 @@
 private writing
-writeInstanceSideMethodDefinitions: aClassDefinition on: stream
+writeInstanceSideMethodDefinitions: aClassDefinition on: aStream
 	((snapshot definitions 
 		select: [ :each | 
 			each isMethodDefinition 
@@ -7,7 +7,7 @@ writeInstanceSideMethodDefinitions: aClassDefinition on: stream
 			and: [ each classIsMeta not ] ] ])
 		sorted: [ :a :b | a selector < b selector ])
 		do: [ :each | 
-			self writeMethodDefinition: each on: stream ]
+			self writeMethodDefinition: each parent: aClassDefinition on: aStream ]
 
 	
 	

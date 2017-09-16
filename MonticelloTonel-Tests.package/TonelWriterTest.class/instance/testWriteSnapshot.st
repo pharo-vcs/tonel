@@ -19,7 +19,8 @@ testWriteSnapshot
 			'MCMockClassG.class.st' 
 			'MCMockClassH.class.st' 
 			'MCMockClassI.class.st' 
-			'MCSnapshotTest.extension.st').
+			'MCSnapshotTest.extension.st'
+			'package.st').
 	self 
 		assert: (mem / 'MonticelloMocks' / 'MCMockClassA.class.st') contents
 		equals: self expectedMCMockClassAClassSt.

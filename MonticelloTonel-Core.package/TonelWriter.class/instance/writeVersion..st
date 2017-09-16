@@ -1,3 +1,3 @@
-as yet unclassified
+writing
 writeVersion: aVersion
 	self writeSnapshot: aVersion snapshot
