@@ -1,6 +1,6 @@
 tests
 testWriteSnapshot
-	| writer mem |
+	| writer mem nl |
 	
 	mem := FileSystem memory root.
 	writer := TonelWriter on: mem.
@@ -21,12 +21,14 @@ testWriteSnapshot
 			'MCMockClassI.class.st' 
 			'MCSnapshotTest.extension.st'
 			'package.st').
+	
+	nl := OSPlatform current lineEnding.
 	self 
 		assert: (mem / 'MonticelloMocks' / 'MCMockClassA.class.st') contents
-		equals: self expectedMCMockClassAClassSt.
+		equals: (self expectedMCMockClassAClassSt withLineEndings: nl).
 	self 
 		assert: (mem / 'MonticelloMocks' / 'MCMockASubclass.class.st') contents
-		equals: self expectedMCMockASubclassClassSt.
+		equals: (self expectedMCMockASubclassClassSt withLineEndings: nl).
 	self 
 		assert: (mem / 'MonticelloMocks' / 'MCSnapshotTest.extension.st') contents
-		equals: self expectedMCSnapshotTestExtensionSt
+		equals: (self expectedMCSnapshotTestExtensionSt withLineEndings: nl)
