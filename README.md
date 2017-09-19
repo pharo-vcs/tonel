@@ -1,4 +1,4 @@
-# Tonel [![Build Status](https://travis-ci.org/pharo-vcs/tonel.svg)](https://travis-ci.org/pharo-vcs/tonel.svg)
+# Tonel [![Build Status](https://travis-ci.org/pharo-vcs/tonel.svg)](https://travis-ci.org/pharo-vcs/tonel)
 
 Tonel is a file-per-class format for monticello repositories.
 
