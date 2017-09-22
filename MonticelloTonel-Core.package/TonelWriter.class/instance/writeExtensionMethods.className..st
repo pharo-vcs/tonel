@@ -8,4 +8,4 @@ writeExtensionMethods: methods className: className
 		do: [ :s |
 			s << 'Extension ' << (self toSTON: { #name -> className } asDictionary) << nl.
 			(methods sorted: [ :a :b | a selector < b selector ])
-				do: [ :each | self writeMethodDefinition: each on: stream ] ]
+				do: [ :each | self writeMethodDefinition: each on: s ] ]
