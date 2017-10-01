@@ -2,7 +2,7 @@ private
 splitMethodSource: aMethodDefinition into: aBlock
 	| keywords source declaration |
 	
-	keywords := aMethodDefinition selector substrings: ':'.
+	keywords := aMethodDefinition selector keywords.
 	source := aMethodDefinition source readStream.
 	"Skip spaces"
 	(source peek isSeparator) ifTrue: [ self skipSeparators: source ].
@@ -10,10 +10,7 @@ splitMethodSource: aMethodDefinition into: aBlock
 	(source peek = $") ifTrue: [ self skipComment: source ]. 
 	"Parse declaration"
 	declaration := String new writeStream.
-	[ (keywords allSatisfy: [ :each | 
-			declaration originalContents 
-			includesSubstring: each 
-			caseSensitive: true ]) not
+	[ (self selectorIsComplete: keywords in: declaration originalContents) not 
 		or: [ ':+-/\*~<>=@,%|&?!' includes: declaration contents trimRight last ] ]
 	whileTrue: [ 
 		"get separators"
