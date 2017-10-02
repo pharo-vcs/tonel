@@ -1,6 +1,7 @@
 private
 extractSelector: aString
-	| separators keywords |
+	| separators selectorStream keywords |
+	
 	separators := { 
 		Character space. 
 		Character tab. 
@@ -10,11 +11,11 @@ extractSelector: aString
 		$:}.
 
 	keywords := Array new writeStream.
-	stream := aString readStream.
-	[ stream atEnd ]
+	selectorStream := aString readStream.
+	[ selectorStream atEnd ]
 	whileFalse: [ | word ch |
 		word := String new writeStream.
-		[ stream atEnd not and: [ (separators includes: (ch := stream next)) not ] ]
+		[ selectorStream atEnd not and: [ (separators includes: (ch := selectorStream next)) not ] ]
 		whileTrue: [ word nextPut: ch ].
 		ch = $: ifTrue: [ word nextPut: ch ]. 
 		word contents trimBoth ifNotEmpty: [ :v | keywords nextPut: v ] ].
