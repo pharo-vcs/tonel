@@ -75,3 +75,14 @@ name: aString
 	writer splitMethodSource: definition into: [ :d :s | declaration := d. source := s ].
 	self assert: declaration equals: 'name: aString'.
 	self assert: source equals: ' name := aString'.
+	
+	"test method name containin name of keywords in variables"
+	definition := MCMethodDefinition
+		className: #SomeClass
+		selector: #a:b:c:
+		category: 'accessing'
+		timeStamp: nil
+		source: 'a: b b: c c: d ^ 42'.
+	writer splitMethodSource: definition into: [ :d :s | declaration := d. source := s ].
+	self assert: declaration equals: 'a: b b: c c: d'.
+	self assert: source equals: ' ^ 42'.
