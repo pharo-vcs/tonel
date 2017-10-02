@@ -5,7 +5,7 @@ newMethodDefinitionFrom: anArray
 	metadata := anArray second ifNil: [ Dictionary new ].
 	className := anArray fourth first first.
 	meta := anArray fourth first second notNil.
-	selector := (RBParser parseMethod: anArray fourth second) selector.
+	selector := self extractSelector: anArray fourth second trimBoth.
 	source := String streamContents: [ :s | 
 		s << anArray fourth second.
 		anArray fifth ifNotEmpty: [ :src | s << src ] ].
