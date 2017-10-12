@@ -1,7 +1,8 @@
 tests
 testRemoveFromEnclosingStartEnd
-	| parser |
+	| parser nl |
 	
+	nl := OSPlatform current lineEnding.
 	parser := TonelParser new.
 	self 
 		assert: (parser 
@@ -12,31 +13,30 @@ testRemoveFromEnclosingStartEnd
 		
 	self 
 		assert: (parser 
-			removeFrom: '[ 
-	^ self ]'  
+			removeFrom: ('[ 
+	^ self ]' withLineEndings: nl) 
 			enclosingStart: $[ 
 			end: $])
 		equals: Character tab asString, '^ self'.
 	
 	self 
 		assert: (parser 
-			removeFrom: '[ 
+			removeFrom: ('[ 
 	^ self
-	]'
+	]' withLineEndings: nl)
 			enclosingStart: $[ 
 			end: $])
 		equals: Character tab asString, '^ self'.
 		
-	
 	self 
 		assert: (parser 
-			removeFrom: '[ 
+			removeFrom: ('[ 
 
 	^ self
 
-]'
+]' withLineEndings: nl)
 			enclosingStart: $[ 
 			end: $])
-		equals: '
+		equals: ('
 	^ self
-'
+' withLineEndings: nl)
