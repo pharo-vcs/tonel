@@ -1,10 +1,11 @@
 tests
 testLoadDefinitions
-	| mem reader |
+	| snapshot mem reader |
 	
-	mem := self newMemoryFileSystem.
+	snapshot := self mockSnapshot.
+	mem := self newMemoryFileSystemSnapshot: snapshot.
 	reader := TonelReader on: mem fileName: 'MonticelloMocks'.
 	reader loadDefinitions.
 	self 
 		assert: reader definitions sorted asOrderedCollection
-		equals: self mockSnapshot definitions sorted
+		equals: snapshot definitions sorted
