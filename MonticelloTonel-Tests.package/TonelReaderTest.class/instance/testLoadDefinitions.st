@@ -7,8 +7,8 @@ testLoadDefinitions
 	reader := TonelReader on: mem fileName: 'MonticelloMocks'.
 	reader loadDefinitions.
 	self 
-		assert: self class mockSnapshotSTON
-		equals: (STON toStringPretty: (MCSnapshot fromDefinitions: reader definitions)).
+		assert: self class mockSnapshotSTON withSqueakLineEndings
+		equals: (STON toStringPretty: (MCSnapshot fromDefinitions: reader definitions asArray)) withSqueakLineEndings.
 	self 
 		assert: reader definitions
 		equals: snapshot definitions sorted
