@@ -14,4 +14,4 @@ loadDefinitions
 		ifFalse: [ newCategories := newCategories copyWithFirst: self package name ].
 	organization := MCOrganizationDefinition categories: newCategories.
 	
-	definitions := newDefinitions copyWithFirst: organization
+	definitions := (newDefinitions copyWithFirst: organization) sort
