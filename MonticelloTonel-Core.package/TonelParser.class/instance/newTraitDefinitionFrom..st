@@ -16,6 +16,7 @@ newTraitDefinitionFrom: anArray
 		ifPresent: [ :classTraits |
 			traitDefs := traitDefs copyWith: (MCClassTraitDefinition
  				baseTraitName: (metadata at: #name)
- 				classTraitComposition: classTraits) ].
+ 				classTraitComposition: classTraits
+				category: (metadata at: #category)) ].
 			
 	^ traitDefs
