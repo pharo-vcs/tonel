@@ -6,4 +6,4 @@ definitionOrders
 		MCMethodDefinition. 			1.
 		MCClassDefinition. 			2.
 		MCTraitDefinition. 			2.
-		MCClassTraitDefinition. 		2 }
+		MCClassTraitDefinition. 		3 }
