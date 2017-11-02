@@ -6,7 +6,7 @@ newTraitDefinitionFrom: anArray
 	traitDefs := { 
 		MCTraitDefinition
 			name: (metadata at: #name)
-			traitComposition: (metadata at: 'traits' ifAbsent: [ '{}' ])
+			traitComposition: (metadata at: #traits ifAbsent: [ '{}' ])
 			category: (metadata at: #category)
 			comment: (anArray second ifNil: [ '' ])
 			commentStamp: nil }.
