@@ -11,7 +11,8 @@ extractSelector: aString
 		$:}.
 
 	keywords := Array new writeStream.
-	selectorStream := aString readStream.
+	selectorStream := (self removeComments: aString) readStream.
+
 	[ selectorStream atEnd ]
 	whileFalse: [ | word ch |
 		word := String new writeStream.
