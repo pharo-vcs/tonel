@@ -34,6 +34,11 @@ repo savedPackages do: [ :each | | filetreePackage |
 
 repo addProperties: (IceRepositoryProperties fromDictionary: { #format -> #tonel } asDictionary).
 
+"remove .filetreee remaining"
+filetreeFiles := sourceDir allChildrenMatching: '.filetree'.
+filetreeFiles do: #ensureDelete.
+repo addFilesToIndex: (filetreeFiles collect: [ :each | (each relativeTo: locationDir) fullName ]).
+
 repo 
 	commitIndexWithMessage: 'sources migrated' 
 	andParents: { commit }.
