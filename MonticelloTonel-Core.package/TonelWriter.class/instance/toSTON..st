@@ -1,5 +1,6 @@
 private
 toSTON: anObject
-	^ (String streamContents: [ :stream | 
-		(TonelSTONWriter on: stream) nextPut: anObject ])
-		withLineEndings: self newLine
+	^ String streamContents: [ :outStream | 
+		(TonelSTONWriter on: outStream) 
+			newLine: self newLine;
+			nextPut: anObject ]
