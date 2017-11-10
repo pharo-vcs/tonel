@@ -1,0 +1,3 @@
+scanning
+scan 
+	self subclassResponsibility

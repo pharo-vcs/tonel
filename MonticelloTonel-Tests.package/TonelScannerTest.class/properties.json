@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "MCTestCase",
+	"category" : "MonticelloTonel-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "TonelScannerTest",
+	"type" : "normal"
+}

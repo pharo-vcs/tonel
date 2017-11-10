@@ -1,0 +1,21 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "TonelScanner",
+	"category" : "MonticelloTonel-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"isComment",
+		"isString",
+		"isLiteralArray",
+		"char",
+		"prevChar",
+		"prevPrevChar",
+		"result",
+		"count",
+		"isFinished"
+	],
+	"name" : "TonelSourceScanner",
+	"type" : "normal"
+}
