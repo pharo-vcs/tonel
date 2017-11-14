@@ -1,5 +1,5 @@
 SmalltalkCISpec {
-  #specName : 'Tonel',
+  #name : 'Tonel',
   #loading : [
     SCIMetacelloLoadSpec {
       #baseline : 'Tonel',
