@@ -1,5 +1,5 @@
 scanning
 scanForCommentIfMatch: aBlock
 	self isStartingComment ifFalse: [ ^ self ]. 
-	self readUntil: [ char = $" and: [ stream peek ~= $" ] ].
+	self readUntilTermination: $".
 	aBlock value

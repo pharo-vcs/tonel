@@ -6,5 +6,4 @@ readUntil: aBlock
 		prevChar := char.
 		char := stream next. 
 		result nextPut: char.
-		(aBlock cull: char cull: prevChar cull: prevPrevChar) 
-			ifTrue: [ ^ self ] ]
+		aBlock value ifTrue: [ ^ self ] ]

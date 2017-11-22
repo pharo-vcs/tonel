@@ -2,6 +2,14 @@ tests
 testScanForStringIfMatch
 	| scanner |
 	
+	scanner := TonelSourceScanner on: '''simple comment ''''with'''' colons enclosing word''' readStream.
+	scanner prepareToScan.
+	scanner scanNextChunk. 
+	scanner scanForStringIfMatch: [].
+	self 
+		assert: ((scanner instVarNamed: 'result') contents)
+		equals: '''simple comment ''''with'''' colons enclosing word'''.	
+	
 	scanner := TonelSourceScanner on: '''''' readStream.
 	scanner prepareToScan.
 	scanner scanNextChunk. 
@@ -36,10 +44,10 @@ string'''.
 		assert: ((scanner instVarNamed: 'result') contents)
 		equals: '''simple string with '''' colons inside'''.	
 
-	scanner := TonelSourceScanner on: '''simple comment with colons at the end''''' readStream.
+	scanner := TonelSourceScanner on: '''simple string with colons at the end''''' readStream.
 	scanner prepareToScan.
 	scanner scanNextChunk. 
 	scanner scanForStringIfMatch: [].
 	self 
 		assert: ((scanner instVarNamed: 'result') contents)
-		equals: '''simple comment with colons at the end'''''
+		equals: '''simple string with colons at the end'''''
