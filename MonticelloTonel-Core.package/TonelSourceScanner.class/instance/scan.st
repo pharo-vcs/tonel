@@ -1,10 +1,6 @@
 scanning
 scan
-	result := String new writeStream.
-	isFinished := isComment := isString := isLiteralArray := false.
-	char := prevChar := prevPrevChar := nil.
-	count := 0.	
-			
+	self prepareToScan.	
 	stream peek = $[ ifFalse: [ TonelParseError signal: 'Can''t parse method body' ].
 	[ stream atEnd or: [ isFinished ] ]
 	whileFalse: [ self scanNextChunk ].
