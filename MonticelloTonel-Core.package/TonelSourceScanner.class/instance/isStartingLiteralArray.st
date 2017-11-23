@@ -1,4 +1,4 @@
 testing
 isStartingLiteralArray
-	"I accept if character is $( but is not preceded by a $$"
-	^ char = $( and: [ prevChar ~= $$ ]
+	"I accept if character is $( and is preceded by $#"
+	^ char = $( and: [ prevChar = $# ]

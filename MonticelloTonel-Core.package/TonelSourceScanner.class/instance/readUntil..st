@@ -1,9 +1,6 @@
 private
 readUntil: aBlock
-	[ stream atEnd not ]
-	whileTrue: [
-		prevPrevChar := prevChar.
-		prevChar := char.
-		char := stream next. 
-		result nextPut: char.
+	[ stream atEnd ]
+	whileFalse: [
+		self readNext.
 		aBlock value ifTrue: [ ^ self ] ]

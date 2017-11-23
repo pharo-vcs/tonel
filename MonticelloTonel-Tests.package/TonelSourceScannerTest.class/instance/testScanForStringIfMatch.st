@@ -1,6 +1,14 @@
 tests
 testScanForStringIfMatch
 	| scanner |
+
+	scanner := TonelSourceScanner on: '''-.*$''' readStream.
+	scanner prepareToScan.
+	scanner scanNextChunk. 
+	scanner scanForStringIfMatch: [].
+	self 
+		assert: ((scanner instVarNamed: 'result') contents)
+		equals: '''-.*$'''.	
 	
 	scanner := TonelSourceScanner on: '''simple comment ''''with'''' colons enclosing word''' readStream.
 	scanner prepareToScan.
