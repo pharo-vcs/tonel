@@ -1,5 +1,6 @@
 SmalltalkCISpec {
   #name : 'Tonel',
+  #preLoading: 'scripts/preLoading.st',
   #loading : [
     SCIMetacelloLoadSpec {
       #baseline : 'Tonel',
