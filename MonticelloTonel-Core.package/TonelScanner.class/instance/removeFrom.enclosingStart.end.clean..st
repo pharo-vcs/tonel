@@ -1,16 +1,17 @@
 private
 removeFrom: aString enclosingStart: startChar end: endChar clean: cleanSymbol
 	"cleanSymbol can be #left, #rigth and #both" 
-	| result stop ch start end |
+	| nl result stop ch start end |
 	
-	result := aString trimBoth readStream.
+	nl := OSPlatform current lineEnding.
+	result := (aString trimBoth withLineEndings: nl) readStream.
 	(result peek = startChar) 
 		ifFalse: [ TonelParseError signal: 'I cannot remove enclosing start' ].
 	result skip: 1.
 	
 	(#(both left) includes: cleanSymbol) 
 		ifTrue: [ 
-			stop := OSPlatform current lineEnding size.
+			stop := nl size.
 			[ (stop > 0) and: [ self isSeparator: (ch := result peek) ] ]
 			whileTrue: [ 
 				(self isEnter: ch) ifTrue: [ stop := stop - 1 ].
