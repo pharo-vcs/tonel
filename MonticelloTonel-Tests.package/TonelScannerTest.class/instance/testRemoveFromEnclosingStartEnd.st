@@ -37,6 +37,6 @@ testRemoveFromEnclosingStartEnd
 ]' withLineEndings: nl)
 			enclosingStart: $[ 
 			end: $])
-		equals: ('
+		equals: '
 	^ self
-' withLineEndings: nl)
+'
