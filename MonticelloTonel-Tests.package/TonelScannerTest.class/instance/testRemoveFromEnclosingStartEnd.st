@@ -2,7 +2,7 @@ tests
 testRemoveFromEnclosingStartEnd
 	| scanner nl |
 	
-	nl := OSPlatform current lineEnding.
+	nl := String cr.
 	scanner := TonelScanner basicNew.
 	self 
 		assert: (scanner 
@@ -37,6 +37,6 @@ testRemoveFromEnclosingStartEnd
 ]' withLineEndings: nl)
 			enclosingStart: $[ 
 			end: $])
-		equals: '
+		equals: (('
 	^ self
-'
+') withLineEndings: nl)

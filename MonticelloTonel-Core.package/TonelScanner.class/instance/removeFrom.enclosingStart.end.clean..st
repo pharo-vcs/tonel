@@ -3,7 +3,7 @@ removeFrom: aString enclosingStart: startChar end: endChar clean: cleanSymbol
 	"cleanSymbol can be #left, #rigth and #both" 
 	| nl result stop ch start end |
 	
-	nl := String cr. "new line will be internal new line: cr"
+	nl := String cr.
 	result := (aString trimBoth withLineEndings: nl) readStream.
 	(result peek = startChar) 
 		ifFalse: [ TonelParseError signal: 'I cannot remove enclosing start' ].
