@@ -1,3 +1,4 @@
 running
 tearDown
-	self directory ensureDeleteAll
+	self directory ensureDeleteAll.
+	super tearDown
