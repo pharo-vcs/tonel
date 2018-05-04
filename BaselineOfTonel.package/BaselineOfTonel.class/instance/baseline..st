@@ -7,7 +7,7 @@ baseline: spec
 			spec
 				package: #'MonticelloTonel-Core';
 				package: #'MonticelloTonel-FileSystem' with: [ spec requires: #('MonticelloTonel-Core') ];
-				package: #'MonticelloTonel-Tests'.
+				package: #'MonticelloTonel-Tests' with: [ spec requires: #('MonticelloTonel-Core') ].
 			spec
 				group: 'default' with: #('core' 'tests');
 				group: 'core' with: #('MonticelloTonel-Core' 'MonticelloTonel-FileSystem');
