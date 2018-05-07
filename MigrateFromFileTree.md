@@ -33,11 +33,13 @@ repo savedPackages do: [ :each | | filetreePackage |
 		subDirWithDelim, (IceLibgitFiletreeWriter directoryNameFor: each). } ].
 
 repo addProperties: (IceRepositoryProperties fromDictionary: { #format -> #tonel } asDictionary).
+"add .properties"
+repo addFilesToIndex: { (subDirWithDelim, '.properties').}.
 
 "remove .filetreee remaining"
 filetreeFiles := sourceDir allChildrenMatching: '.filetree'.
 filetreeFiles do: #ensureDelete.
-repo addFilesToIndex: (filetreeFiles collect: [ :each | (each relativeTo: locationDir) fullName ]).
+repo addFilesToIndex: (filetreeFiles collect: [ :each | ((each relativeTo: locationDir) printWithDelimiter: $/) ]).
 
 repo 
 	commitIndexWithMessage: 'sources migrated' 
