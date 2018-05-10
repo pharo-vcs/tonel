@@ -25,28 +25,38 @@ Metacello new
 
 
 1. comment
-a comment declaration as this:
+
+   comment declaration is this:
 
     "
     comment string
     "
 
-is optional (but it should be there, in good design ;)
+   it's optional (but normally there, in a good design ;)
 
 2. type
-Class|Trait|Extension
+
+   Class|Trait|Extension
 
 3. typeDefinition
-a STON file with class/trait/extension metadata
+
+   STON file with class/trait/extension metadata
 
 4. methodMetadata
-a STON file with method metadata
-is optional (but also, recommended)
+
+   STON file with method metadata
+   it's optional (but also, recommended)
 
 5. method
-method declaration as this: 
+
+   method declaration is this: 
 
     Class[ class] >> selector
 
 6. methodBody 
-the method body (we do not parse contents, that's classbuilder task)
+
+   the method body (we do not parse contents, that's a classbuilder task)
+   
+### Migrating
+
+If you are migrating from the previous filetree (one file per method) format, the [included script](./MigrateFromFileTree.md) might help.
