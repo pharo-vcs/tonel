@@ -4,9 +4,9 @@ Migrate from FileTree to Tonel
 I have prepared this small script to help with migration:
 
 ```Smalltalk
-crntRepo := (Iceberg repositoryForPackage: YourApp package) backend.
-locationDir := crntRepo location. "or override as 'path/to/your/repo' asFileReference"
-subDir := crntRepo subdirectory. "or override as 'your-source-dir-or-empty' "
+currentRepo := (Iceberg repositoryForPackage: YourApp package) backend.
+locationDir := currentRepo location. "or override as 'path/to/your/repo' asFileReference"
+subDir := currentRepo subdirectory. "or override as 'your-source-dir-or-empty' "
 
 sourceDir := locationDir.
 subDir 
