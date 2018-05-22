@@ -1,11 +1,13 @@
 Migrate from FileTree to Tonel
 ===
 
-I prepared this small script to drive your migration:
+I have prepared this small script to help with migration:
 
 ```Smalltalk
-locationDir := 'path/to/your/repo' asFileReference.
-subDir := 'your-source-dir-or-empty'.
+currentRepository := (Iceberg repositoryForPackage: YourApp package) backend.
+locationDir := currentRepository location. 	"or change to := 'path/to/your/repo' asFileReference"
+subDir := currentRepository subdirectory. 	"or change to := 'your-source-dir-or-empty' "
+
 sourceDir := locationDir.
 subDir 
 	ifNotNil: [
