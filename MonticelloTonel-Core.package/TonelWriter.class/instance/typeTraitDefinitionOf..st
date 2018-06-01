@@ -6,6 +6,12 @@ typeTraitDefinitionOf: aClassDefinition
 		at: #name put: aClassDefinition className; 
 		yourself.
 
+	(aClassDefinition variables select: #isInstanceVariable thenCollect: #name)
+		ifNotEmpty: [ :vars | definition at: #instVars put: vars asArray ].
+
+	(aClassDefinition variables select: #isClassInstanceVariable thenCollect: #name)
+		ifNotEmpty: [ :vars | definition at: #classInstVars put: vars asArray ].
+
 	aClassDefinition hasTraitComposition ifTrue: [ 
 		definition		
 			at: #traits 
