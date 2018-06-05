@@ -1,15 +1,12 @@
 private factory
 newTraitDefinitionFrom: anArray
 	| metadata traitDefs |
-	metadata := anArray sixth.
 	
+	metadata := anArray sixth.
 	traitDefs := { 
-		MCTraitDefinition
-			name: (metadata at: #name)
-			traitComposition: (metadata at: #traits ifAbsent: [ '{}' ])
-			category: (metadata at: #category)
-			comment: (anArray second ifNil: [ '' ])
-			commentStamp: nil }.
+		self hasStatefulTraits 
+			ifTrue: [ self newStatefulTraitDefinitionFrom: anArray ]
+			ifFalse: [ self newStatelessTraitDefinitionFrom: anArray ] }.
 			
 	metadata 
 		at: #classTraits

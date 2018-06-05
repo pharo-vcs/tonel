@@ -8,6 +8,7 @@
 	"instvars" : [
 		"isComment",
 		"isString",
+		"isLiteralArray",
 		"char",
 		"prevChar",
 		"prevPrevChar",
