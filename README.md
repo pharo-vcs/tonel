@@ -56,7 +56,3 @@ Metacello new
 6. methodBody 
 
    the method body (we do not parse contents, that's a classbuilder task)
-   
-### Migrating
-
-If you are migrating from the previous filetree (one file per method) format, the [included script](./MigrateFromFileTree.md) might help.
