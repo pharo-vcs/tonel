@@ -24,7 +24,7 @@ Metacello new
     )*
 
 
-1. comment
+1. **comment**
 
    comment declaration is this:
 
@@ -34,25 +34,34 @@ Metacello new
 
    it's optional (but normally there, in a good design ;)
 
-2. type
+1. **type**
 
    Class|Trait|Extension
 
-3. typeDefinition
+1. **typeDefinition**
 
    STON file with class/trait/extension metadata
 
-4. methodMetadata
+1. **methodMetadata**
 
    STON file with method metadata
    it's optional (but also, recommended)
 
-5. method
+1. **method**
 
    method declaration is this: 
 
     Class[ class] >> selector
 
-6. methodBody 
+1. **methodBody**
 
    the method body (we do not parse contents, that's a classbuilder task)
+   
+## Miscelanous
+
+When using [Iceberg](https://github.com/pharo-vcs/iceberg) to save Smalltalk in this format it is customary to follow the convention of saving Tonel source in a in immediate project sub directory called ```src```. To cause Iceberg to use Tonel format you must additionaly create a file called ```.properties``` in this directory containing the following directive:
+```
+{
+	#format : #tonel
+}
+```
