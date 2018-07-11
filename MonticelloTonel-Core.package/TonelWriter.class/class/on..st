@@ -1,5 +1,5 @@
 instance creation
-on: sourceDir
+on: directoryReference
 	^ self new
-		sourceDir: sourceDir;
+		directoryReference: directoryReference;
 		yourself

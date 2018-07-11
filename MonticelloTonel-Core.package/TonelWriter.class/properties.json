@@ -1,5 +1,5 @@
 {
-	"commentStamp" : "EstebanLorenzano 9/11/2017 12:10",
+	"commentStamp" : "GuillermoPolito 7/11/2018 11:07",
 	"super" : "MCWriter",
 	"category" : "MonticelloTonel-Core",
 	"classinstvars" : [ ],
@@ -7,8 +7,8 @@
 	"classvars" : [ ],
 	"instvars" : [
 		"snapshot",
-		"sourceDir",
-		"packageDir"
+		"packageDir",
+		"directoryReference"
 	],
 	"name" : "TonelWriter",
 	"type" : "normal"
