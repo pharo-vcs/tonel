@@ -6,7 +6,7 @@ scanForBlockIfMatch: aBlock
 	(char = $[ and: [  prevChar ~= $$ ]) ifTrue: [ 
 		count := count + 1.
 		match := true ].
-	(char = $] and: [ prevChar ~= $$ ]) ifTrue: [ 
+	(char = $] and: [ prevChar ~= $$ or: [ prevPrevChar = $$ ] ]) ifTrue: [ 
 		count := count - 1.
 		match := true ].
 	count = 0 ifTrue: [ isFinished := true ].
