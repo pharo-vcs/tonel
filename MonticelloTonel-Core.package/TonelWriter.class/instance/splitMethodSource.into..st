@@ -13,6 +13,8 @@ splitMethodSource: aMethodDefinition into: aBlock
 	[ (self selectorIsComplete: keywords in: declaration originalContents) not 
 		or: [ ':+-/\*~<>=@,%|&?!' includes: declaration contents trimRight last ] ]
 	whileTrue: [ 
+		"stop infinite loop if no match was found"
+		source atEnd ifTrue: [ TonelWriteError signal: 'Cannot find selector in source for ', aMethodDefinition asString ].
 		"get separators"
 		[ source atEnd not and: [ source peek isSeparator ] ]
 			whileTrue: [ declaration nextPut: source next ].
