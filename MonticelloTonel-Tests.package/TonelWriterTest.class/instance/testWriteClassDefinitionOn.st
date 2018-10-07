@@ -27,7 +27,7 @@ comment test
 Class {
 	#name : #SomeObject,
 	#superclass : #Object,
-	#category : #Kernel
+	#category : ''Kernel''
 }
 ' withLineEndings: OSPlatform current lineEnding).
 
@@ -69,6 +69,6 @@ Class {
 	#classInstVars : [
 		''instVarA''
 	],
-	#category : #Kernel
+	#category : ''Kernel''
 }
 ' withLineEndings: OSPlatform current lineEnding).

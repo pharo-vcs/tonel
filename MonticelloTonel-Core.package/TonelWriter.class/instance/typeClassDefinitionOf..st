@@ -28,7 +28,7 @@ typeClassDefinitionOf: aClassDefinition
 	(aClassDefinition variables select: #isClassInstanceVariable thenCollect: #name)
 		ifNotEmpty: [ :vars | definition at: #classInstVars put: vars asArray ].
 
-	definition 		
-		at: #category put: aClassDefinition category.
+	"categories needs to be saved as String. See https://github.com/pharo-vcs/tonel/issues/52"
+	definition at: #category put: aClassDefinition category asString.
 	
 	^ self toSTON: definition

@@ -13,84 +13,84 @@ Class {
 		''CVar'',
 		''InitializationOrder''
 	],
-	#category : #MonticelloMocks
+	#category : ''MonticelloMocks''
 }
 
-{ #category : #''as yet unclassified'' }
+{ #category : ''as yet unclassified'' }
 MCMockClassA class >> cVar [
 	^ CVar
 ]
 
-{ #category : #''as yet unclassified'' }
+{ #category : ''as yet unclassified'' }
 MCMockClassA class >> initializationOrder [
 
 	^ InitializationOrder
 ]
 
-{ #category : #''as yet unclassified'' }
+{ #category : ''as yet unclassified'' }
 MCMockClassA class >> initialize [
 	CVar := #initialized.
 	InitializationOrder := 1.
 
 ]
 
-{ #category : #''as yet unclassified'' }
+{ #category : ''as yet unclassified'' }
 MCMockClassA class >> one [
 
 	^ 1
 ]
 
-{ #category : #''as yet unclassified'' }
+{ #category : ''as yet unclassified'' }
 MCMockClassA class >> touchCVar [
 	CVar := #touched
 ]
 
-{ #category : #numeric }
+{ #category : ''numeric'' }
 MCMockClassA >> a [
 	^ ''a2''
 ]
 
-{ #category : #numeric }
+{ #category : ''numeric'' }
 MCMockClassA >> b [
 	^ ''b1''
 ]
 
-{ #category : #numeric }
+{ #category : ''numeric'' }
 MCMockClassA >> c [
 	^ ''c1''
 ]
 
-{ #category : #numeric }
+{ #category : ''numeric'' }
 MCMockClassA >> d [
 	^ ''d''
 ]
 
-{ #category : #boolean }
+{ #category : ''boolean'' }
 MCMockClassA >> falsehood [
 	^ false
 ]
 
-{ #category : #boolean }
+{ #category : ''boolean'' }
 MCMockClassA >> moreTruth [
 
 	^ true
 ]
 
-{ #category : #numeric }
+{ #category : ''numeric'' }
 MCMockClassA >> one [
 	^ 1
 ]
 
-{ #category : #''drag\''n\''drop'' }
+{ #category : ''drag\''n\''drop'' }
 MCMockClassA >> q [
 ]
 
-{ #category : #boolean }
+{ #category : ''boolean'' }
 MCMockClassA >> truth [
 	^ true
 ]
 
-{ #category : #numeric }
+{ #category : ''numeric'' }
 MCMockClassA >> two [
 	^ 2
 ]
