@@ -3,7 +3,7 @@ typeTraitDefinitionOf: aClassDefinition
 	| definition |
 	
 	definition := OrderedDictionary new 
-		at: #name put: aClassDefinition className; 
+		at: #name put: aClassDefinition className asString; 
 		yourself.
 
 	aClassDefinition variables isEmptyOrNil ifFalse: [ 

@@ -1,8 +1,8 @@
 private
 expectedMCMockASubclassClassSt
 	^ 'Class {
-	#name : #MCMockASubclass,
-	#superclass : #MCMockClassA,
+	#name : ''MCMockASubclass'',
+	#superclass : ''MCMockClassA'',
 	#instVars : [
 		''x''
 	],

@@ -3,12 +3,12 @@ typeClassDefinitionOf: aClassDefinition
 	| definition |
 	
 	definition := OrderedDictionary new 
-		at: #name put: aClassDefinition className; 
-		at: #superclass put: aClassDefinition superclassName;
+		at: #name put: aClassDefinition className asString; 
+		at: #superclass put: aClassDefinition superclassName asString;
 		yourself.
 
 	aClassDefinition type = #normal ifFalse: [ 
-		definition at: #type put: aClassDefinition type ].
+		definition at: #type put: aClassDefinition type asString ].
 	
 	aClassDefinition hasTraitComposition ifTrue: [ 
 		definition at: #traits put: aClassDefinition traitCompositionString ].

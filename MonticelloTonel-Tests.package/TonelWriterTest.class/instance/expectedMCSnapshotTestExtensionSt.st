@@ -1,6 +1,6 @@
 private
 expectedMCSnapshotTestExtensionSt
-	^ 'Extension { #name : #MCSnapshotTest }
+	^ 'Extension { #name : ''MCSnapshotTest'' }
 
 { #category : ''*MonticelloMocks'' }
 MCSnapshotTest >> mockClassExtension [

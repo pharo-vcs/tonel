@@ -25,8 +25,8 @@ testWriteClassDefinitionOn
 comment test
 "
 Class {
-	#name : #SomeObject,
-	#superclass : #Object,
+	#name : ''SomeObject'',
+	#superclass : ''Object'',
 	#category : ''Kernel''
 }
 ' withLineEndings: OSPlatform current lineEnding).
@@ -52,8 +52,8 @@ Class {
 comment test
 "
 Class {
-	#name : #SomeObject,
-	#superclass : #Object,
+	#name : ''SomeObject'',
+	#superclass : ''Object'',
 	#instVars : [
 		''a'',
 		''b'',
