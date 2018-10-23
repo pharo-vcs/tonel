@@ -3,7 +3,7 @@ testSourceCodeOf
 	self
 		assert: (self actualClass sourceCodeOf: TonelMock)
 		equals:
-			'"
+			('"
 Description
 --------------------
 
@@ -25,3 +25,4 @@ TonelMock >> instanceMethod [
 	^ true
 ]
 '
+				withLineEndings: OSPlatform current lineEnding)
