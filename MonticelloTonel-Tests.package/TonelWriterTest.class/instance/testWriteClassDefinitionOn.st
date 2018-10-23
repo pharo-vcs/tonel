@@ -2,7 +2,7 @@ tests
 testWriteClassDefinitionOn
 	| writer def stream |
 	
-	writer := TonelWriter new.
+	writer := self actualClass new.
 
 	stream := String new writeStream.
 	def := MCClassDefinition

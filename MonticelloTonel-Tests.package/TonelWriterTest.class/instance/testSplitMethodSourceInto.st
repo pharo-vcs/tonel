@@ -5,7 +5,7 @@ testSplitMethodSourceInto
 	newLine := OSPlatform current lineEnding.
 	tab := Character tab asString.
 	space := Character space asString.
-	writer := TonelWriter new.
+	writer := self actualClass new.
 
 	"simplest split"
 	definition := MCMethodDefinition
