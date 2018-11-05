@@ -6,8 +6,7 @@ writeSnapshot: aSnapshot
 	 It has to be just one but well..."
 	self writePackage: (snapshot definitions 
 		detect: #isOrganizationDefinition
-		ifFound: [ :each | each ]
-		ifNone: [ self createDefaultOrganizationFrom: (snapshot definitions detect: #isClassDefinition) ]).
+		ifNone: [ self createDefaultOrganizationFrom: snapshot definitions ]).
 	"now export classes"
 	(snapshot definitions 
 		select: #isClassDefinition)
