@@ -1,4 +1,4 @@
 testing
 isStartingLiteralArray
-	"I accept if character is $( and is preceded by $#"
+	"Literal array starts with a sharp sign followed by parenthesis in Smalltalk syntax"
 	^ char = $( and: [ prevChar = $# ]

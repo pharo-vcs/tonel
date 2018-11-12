@@ -2,9 +2,9 @@ metacello support
 goferVersionFrom: aVersionReference
 	"Simillar hack than FileTree repositories."
 
-	((self readableFileNames collect: [ :fileName | self fileDirectoryOn: fileName ])
-		select: [ :packageDirectory | self fileUtils directoryExists: packageDirectory ])
-		collect: [ :packageDirectory | 
-			(self versionInfoForPackageDirectory: packageDirectory) name = aVersionReference name
+	(self readableFileNames collect: [ :fileName | self fileDirectoryOn: fileName ])
+		do: [ :packageDirectory |
+			((self fileUtils directoryExists: packageDirectory )
+			and: [(self versionInfoForPackageDirectory: packageDirectory) name = aVersionReference name])
 				ifTrue: [ ^ self loadVersionFromFileNamed: (self fileUtils directoryName: packageDirectory) ] ].
-	^ nil
+	^nil

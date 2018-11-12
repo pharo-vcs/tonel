@@ -1,6 +1,6 @@
 private
 removeFrom: aString enclosingStart: startChar end: endChar clean: cleanSymbol
-	"cleanSymbol can be #left, #rigth and #both" 
+	"cleanSymbol can be #left, #right and #both" 
 	| nl result stop ch start end |
 	
 	nl := String cr.

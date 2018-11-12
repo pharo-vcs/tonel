@@ -1,13 +1,10 @@
 private
 selectorIsComplete: keywords in: aString
-	| start |
-	
-	start := 1.
-	keywords do: [ :each | | index | 
-		index := aString 
-			findString: each 
+	keywords inject: 1 into: [ :start :key | | startOfKey | 
+		startOfKey := aString 
+			findString: key 
 			startingAt: start 
 			caseSensitive: true.
-		index = 0 ifTrue: [ ^ false ].
-		start := index + each size ].
+		startOfKey = 0 ifTrue: [ ^ false ].
+		startOfKey + key size ].
 	^ true
