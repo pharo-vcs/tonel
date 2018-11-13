@@ -1,17 +1,13 @@
 {
-	"commentStamp" : "<historical>",
+	"commentStamp" : "nice 11/12/2018 23:01",
 	"super" : "TonelScanner",
 	"category" : "MonticelloTonel-Core",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"isComment",
-		"isString",
-		"isLiteralArray",
 		"char",
 		"prevChar",
-		"prevPrevChar",
 		"result",
 		"count",
 		"isFinished"

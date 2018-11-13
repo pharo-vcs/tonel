@@ -6,8 +6,8 @@ metadata
 
 	count := 0.
 	stream peek = ${ ifFalse: [ TonelParseError signal: 'Can''t parse metadata' ].	
-	[ stream atEnd not ]
-	whileTrue: [ 
+	[ stream atEnd ]
+	whileFalse: [ 
 		ch := stream next.
 		result nextPut: ch.
 		ch = ${ ifTrue: [ count := count +1 ].

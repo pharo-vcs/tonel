@@ -1,12 +1,11 @@
-I'm a scanner to get correct sources from method definitions.
-Is important to follow this remarks:
+I'm a scanner to get correct sources from method definitions in Tonel format.
 
-Since a method body can contain enclosing brackets we need to be sure we will skip them and
-	 correctly read the method. For that, I have to take into account: 
-		- I can mention [] in comments
-		- I can mention [] in strings
-		- I can mention [] in array literals
-		- I can use $[, $] 
-		- I can have inner blocks
-		- I can mention a comment of the form ""$"" or a comment of the form '$'
-	 all that needs to be skipped 
+Implementation details:
+Method body is delineated by square brackets in Tonel format, thus I just have to detect enclosing square brackets [].
+Since a method body can include nested blocks and ByteArray literals, I have to maintain a count of opened and closed brackets in order to correctly detect the end of method body.
+But method body can also contain isolated brackets (which are not necessarily paired) in following patterns:
+		- comments like "["
+		- strings like ']'
+		- array literals like #( [ )
+		- literal characters like $] 
+Therefore, I need to be aware of syntax for the four cases above, in order to correctly skip those potentially isolated brackets.

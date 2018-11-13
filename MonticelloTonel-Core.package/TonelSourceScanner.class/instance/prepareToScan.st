@@ -1,7 +1,7 @@
 private
 prepareToScan
 	result := String new writeStream.
-	isFinished := isComment := isString := isLiteralArray := false.
-	char := prevChar := prevPrevChar := nil.
+	isFinished := false.
+	char := prevChar := nil.
 	count := 0
 	
