@@ -29,6 +29,6 @@ typeClassDefinitionOf: aClassDefinition
 		ifNotEmpty: [ :vars | definition at: #classInstVars put: vars asArray ].
 
 	definition 		
-		at: #category put: aClassDefinition category.
+		at: #category put: aClassDefinition category asSymbol.
 	
 	^ self toSTON: definition
