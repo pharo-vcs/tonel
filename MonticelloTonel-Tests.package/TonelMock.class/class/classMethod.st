@@ -1,0 +1,3 @@
+accessing
+classMethod
+	^ 8
