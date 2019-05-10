@@ -18,8 +18,8 @@ splitMethodSource: aMethodDefinition into: aBlock
 		"get separators"
 		[ source atEnd not and: [ source peek isSeparator ] ]
 			whileTrue: [ declaration nextPut: source next ].
-		"take next word"
-		[ source atEnd not and: [ source peek isSeparator not ] ]
+		"take next word until we find a separator or a dot"
+		[ source atEnd not and: [ source peek ~= $. and: [ source peek isSeparator not ] ] ]
 			whileTrue: [ declaration nextPut: source next ] ].
 	aBlock 
 		value: (declaration contents trimLeft withLineEndings: self newLine)
