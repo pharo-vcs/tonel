@@ -6,7 +6,4 @@ os:
   - osx
 
 smalltalk:
-  - Pharo-5.0
-  - Pharo-6.0
-  - Pharo-6.1
-  - Pharo-7.0
+  - Pharo-8.0
