@@ -7,7 +7,7 @@ scan
 	isFinished ifTrue: [ 
 		"clean up to return"
 		^ self 
-			removeFrom: result contents withSqueakLineEndings
+			removeFrom: result contents withInternalLineEndings
 			enclosingStart: $[ 
 			end: $]
 			clean: #right ].
