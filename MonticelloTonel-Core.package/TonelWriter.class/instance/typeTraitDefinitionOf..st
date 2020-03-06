@@ -17,7 +17,6 @@ typeTraitDefinitionOf: aClassDefinition
 			at: #traits 
 			put: aClassDefinition traitCompositionString ].
 		
-	1halt.
 	aClassDefinition hasClassTraitComposition ifTrue: [ 
 		definition		
 			at: #classTraits 
