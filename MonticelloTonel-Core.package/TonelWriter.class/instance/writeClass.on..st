@@ -4,4 +4,4 @@ writeClass: aClassDefinition on: aStream
 	self writeClassSideMethodDefinitions: aClassDefinition on: aStream.
 	self writeInstanceSideMethodDefinitions: aClassDefinition on: aStream ]
 		on: TonelShouldIgnore
-		do: [ :e | self logCr: 'ignoring: ' , aClassDefinition asString ]
+		do: [ :e | self traceCr: 'ignoring: ' , aClassDefinition asString ]
