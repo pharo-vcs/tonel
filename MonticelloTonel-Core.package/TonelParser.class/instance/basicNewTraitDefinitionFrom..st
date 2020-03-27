@@ -1,15 +1,15 @@
 private factory
-newStatelessTraitDefinitionFrom: anArray
+basicNewTraitDefinitionFrom: anArray
 	| metadata |
 	
 	metadata := anArray sixth.
-	
-	self validateStatelessTraitIsBeingRead: metadata.
-	
+
 	^ MCTraitDefinition
 			name: (metadata at: #name)
 			traitComposition: (metadata at: #traits ifAbsent: [ '{}' ])
-			classTraitComposition: (metadata at: #classTraits ifAbsent: [ '{}' ])
 			category: (metadata at: #category)
+			instVarNames: (metadata at: #instVars ifAbsent: [ #() ])
+			classInstVarNames: (metadata at: #classInstVars ifAbsent: [ #() ])
+			classTraitComposition: (metadata at: #classTraits ifAbsent: [ '{}' ])
 			comment: (anArray second ifNil: [ '' ])
 			commentStamp: nil

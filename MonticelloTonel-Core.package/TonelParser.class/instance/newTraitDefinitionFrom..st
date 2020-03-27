@@ -3,17 +3,12 @@ newTraitDefinitionFrom: anArray
 	| metadata traitDefs |
 	
 	metadata := anArray sixth.
-	traitDefs := { 
-		self hasStatefulTraits 
-			ifTrue: [ self newStatefulTraitDefinitionFrom: anArray ]
-			ifFalse: [ self newStatelessTraitDefinitionFrom: anArray ] }.
+	traitDefs := { self basicNewTraitDefinitionFrom: anArray }.
 			
-	metadata 
-		at: #classTraits
-		ifPresent: [ :classTraits |
+	traitDefs first hasClassTraitComposition ifTrue: [
 			traitDefs := traitDefs copyWith: (MCClassTraitDefinition
  				baseTraitName: (metadata at: #name)
- 				classTraitComposition: classTraits
+ 				classTraitComposition: (metadata at: #classTraits)
 				category: (metadata at: #category)) ].
 			
 	^ traitDefs
