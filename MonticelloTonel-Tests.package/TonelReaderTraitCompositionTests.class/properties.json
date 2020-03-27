@@ -1,11 +1,11 @@
 {
 	"commentStamp" : "",
-	"super" : "AbstractTonelTest",
+	"super" : "TonelReaderTest",
 	"category" : "MonticelloTonel-Tests",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "TonelParserTest",
+	"name" : "TonelReaderTraitCompositionTests",
 	"type" : "normal"
 }

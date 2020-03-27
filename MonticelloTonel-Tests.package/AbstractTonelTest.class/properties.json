@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "",
+	"super" : "MCTestCase",
+	"category" : "MonticelloTonel-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"classesAndTraits",
+		"classWithTraits",
+		"trait1",
+		"trait2",
+		"classWithTraitsWithClassComposition"
+	],
+	"name" : "AbstractTonelTest",
+	"type" : "normal"
+}
