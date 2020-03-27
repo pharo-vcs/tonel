@@ -3,10 +3,7 @@ newTraitDefinitionFrom: anArray
 	| metadata traitDefs |
 	
 	metadata := anArray sixth.
-	traitDefs := { 
-		self hasStatefulTraits 
-			ifTrue: [ self newStatefulTraitDefinitionFrom: anArray ]
-			ifFalse: [ self newStatelessTraitDefinitionFrom: anArray ] }.
+	traitDefs := { self basicNewTraitDefinitionFrom: anArray }.
 			
 	metadata 
 		at: #classTraits
