@@ -15,7 +15,8 @@ checkFilesStructureIn: aFileReference
 			'MCMockClassF.class.st' 
 			'MCMockClassG.class.st' 
 			'MCMockClassH.class.st' 
-			'MCMockClassI.class.st' 
+			'MCMockClassI.class.st'
+			'MCMockClassJ.class.st'
 			'MCSnapshotTest.extension.st'
 			'package.st').
 	

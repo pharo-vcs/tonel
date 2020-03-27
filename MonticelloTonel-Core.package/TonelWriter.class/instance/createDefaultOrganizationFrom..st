@@ -5,7 +5,7 @@ createDefaultOrganizationFrom: aCollection
 	"simplest case, I answer the clas definition"
 	snapshot definitions 
 		detect: #isClassDefinition
-		ifFound: [ :each | ^ MCOrganizationDefinition categories: { each category } ].
+		ifFound: [ :each | ^ MCOrganizationDefinition categories: { each categoryWithoutTag } ].
 	
 	^ self createDefaultOrganizationFromDefinition: (snapshot definitions
 		detect: #isMethodDefinition
