@@ -7,7 +7,7 @@ testWriteSnapshotWithoutOrganizationAndOnlyOnceClassWithTag
 	" Removing all elements from the snapshot except one class 
 	  which is classified in the Package's tag 'Tag' "
 	(aSnapshot definitions
-		select: [ :def | def className ~= #MCMockClassJ ])
+		select: [ :def | def className ~= #MCMockClassI ])
 		do: [ :each | aSnapshot definitions remove: each ].
 	memoryFileReference := FileSystem memory root.
 	writer := self actualClass on: memoryFileReference.
