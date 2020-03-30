@@ -6,6 +6,6 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "TonelReaderTraitCompositionTests",
+	"name" : "TonelReaderTraitCompositionTest",
 	"type" : "normal"
 }
