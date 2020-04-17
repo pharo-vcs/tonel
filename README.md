@@ -4,13 +4,26 @@ Tonel is a file-per-class format for monticello repositories.
 
 ## Installing
 
-### Pharo
+### Pharo > 6.1
+
+Tonel comes out of the box in Pharo > 6.1
+
+### Pharo 4.0 to 6.0
 
 ```Smalltalk
+Metacello new
+  baseline: 'Metacello';
+  repository: 'github://Metacello/metacello:pharo-6.1_dev/repository';
+  get.
+Metacello new
+  baseline: 'Metacello';
+  repository: 'github://Metacello/metacello:pharo-6.1_dev/repository';
+  onConflict: [:ex | ex allow];
+  load.
 Metacello new 
-	repository: 'github://pharo-vcs/tonel';
-	baseline: 'Tonel';
-	load.
+  repository: 'github://pharo-vcs/tonel';
+  baseline: 'Tonel';
+  load.
 ```
 
 ## Tonel Spec
