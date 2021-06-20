@@ -1,4 +1,4 @@
-private parsing
+private - parsing
 try: aBlock
 	^ self 
 		try: aBlock 

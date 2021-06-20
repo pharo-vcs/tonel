@@ -1,4 +1,4 @@
-private definitions
+private - definitions
 commentOf: aClassDefinition
 	^ (aClassDefinition comment 
 		copyReplaceAll: '"' 

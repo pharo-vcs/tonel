@@ -1,4 +1,4 @@
-private parsing
+private - parsing
 word: aString
 	| result |
 	result := stream next: aString size.

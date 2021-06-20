@@ -1,4 +1,4 @@
-private writing
+private - writing
 writeMethodDefinition: aMethodDefinition parent: aClassDefinition on: aStream
 	| nl |
 	

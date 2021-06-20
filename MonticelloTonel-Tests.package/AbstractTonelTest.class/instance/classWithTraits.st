@@ -1,4 +1,4 @@
-utils
+utilities
 classWithTraits
 
 	^ classWithTraits ifNil: [

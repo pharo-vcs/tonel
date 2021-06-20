@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "nice 11/12/2018 23:01",
 	"super" : "TonelScanner",
-	"category" : "MonticelloTonel-Core",
+	"category" : "MonticelloTonel-Core-Scanning",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],

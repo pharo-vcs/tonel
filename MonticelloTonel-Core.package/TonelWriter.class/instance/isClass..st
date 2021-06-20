@@ -1,3 +1,3 @@
-private testing
+private - testing
 isClass: aClassDefinition
 	^ aClassDefinition class = MCClassDefinition

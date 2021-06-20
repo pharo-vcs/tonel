@@ -1,4 +1,4 @@
-utils
+utilities
 trait1
 	
 	^ trait1 ifNil: [ 

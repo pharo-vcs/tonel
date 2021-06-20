@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "CyrilFerlicot 10/23/2018 15:52",
 	"super" : "MCWriter",
-	"category" : "MonticelloTonel-Core",
+	"category" : "MonticelloTonel-Core-Base",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],

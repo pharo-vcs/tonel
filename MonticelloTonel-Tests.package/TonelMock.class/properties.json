@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "CyrilFerlicot 10/23/2018 15:55",
 	"super" : "Object",
-	"category" : "MonticelloTonel-Tests",
+	"category" : "MonticelloTonel-Tests-Mocks",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
