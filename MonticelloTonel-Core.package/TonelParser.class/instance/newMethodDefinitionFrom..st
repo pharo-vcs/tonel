@@ -1,4 +1,4 @@
-private factory
+private - factory
 newMethodDefinitionFrom: anArray
 	| metadata className meta selector source  |
 	

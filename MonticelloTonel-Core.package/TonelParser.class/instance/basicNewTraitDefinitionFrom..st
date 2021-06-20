@@ -1,4 +1,4 @@
-private factory
+private - factory
 basicNewTraitDefinitionFrom: anArray
 	| metadata |
 	

@@ -1,4 +1,4 @@
-private writing
+private - writing
 writeMethodDefinition: aMethodDefinition on: aStream
 	^ self 
 		writeMethodDefinition: aMethodDefinition 
