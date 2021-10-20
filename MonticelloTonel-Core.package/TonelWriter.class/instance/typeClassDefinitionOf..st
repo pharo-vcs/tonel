@@ -8,7 +8,7 @@ typeClassDefinitionOf: aClassDefinition
 		yourself.
 
 	aClassDefinition type = #normal ifFalse: [ 
-		definition at: #type put: aClassDefinition type ].
+		definition at: #type put: aClassDefinition type asString ].
 	
 	aClassDefinition hasTraitComposition ifTrue: [ 
 		definition at: #traits put: aClassDefinition traitCompositionString ].
@@ -28,7 +28,7 @@ typeClassDefinitionOf: aClassDefinition
 	(aClassDefinition variables select: #isClassInstanceVariable thenCollect: #name)
 		ifNotEmpty: [ :vars | definition at: #classInstVars put: vars asArray ].
 
-	definition 		
-		at: #category put: aClassDefinition category asString.
+	"categories needs to be saved as String. See https://github.com/pharo-vcs/tonel/issues/52"
+	definition at: #category put: aClassDefinition category asString.
 	
 	^ self toSTON: definition
