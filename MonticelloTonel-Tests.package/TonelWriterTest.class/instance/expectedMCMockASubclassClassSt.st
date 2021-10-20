@@ -1,18 +1,18 @@
 private
 expectedMCMockASubclassClassSt
 	^ 'Class {
-	#name : #MCMockASubclass,
-	#superclass : #MCMockClassA,
+	#name : ''MCMockASubclass'',
+	#superclass : ''MCMockClassA'',
 	#instVars : [
 		''x''
 	],
 	#classVars : [
 		''Y''
 	],
-	#category : #MonticelloMocks
+	#category : ''MonticelloMocks''
 }
 
-{ #category : #''as yet unclassified'' }
+{ #category : ''as yet unclassified'' }
 MCMockASubclass class >> initialize [
 
 	InitializationOrder := InitializationOrder
@@ -20,12 +20,12 @@ MCMockASubclass class >> initialize [
 		ifNotNil: [ InitializationOrder + 1.]
 ]
 
-{ #category : #''as yet unclassified'' }
+{ #category : ''as yet unclassified'' }
 MCMockASubclass >> variables [
 	^ x + Y + MCMockClassA
 ]
 
-{ #category : #''as yet unclassified'' }
+{ #category : ''as yet unclassified'' }
 MCMockASubclass >> variables2 [
 	^ ivar + CVar
 ]

@@ -3,7 +3,7 @@ typeTraitDefinitionOf: aClassDefinition
 	| definition |
 	
 	definition := OrderedDictionary new 
-		at: #name put: aClassDefinition className; 
+		at: #name put: aClassDefinition className asString; 
 		yourself.
 
 	aClassDefinition variables isEmptyOrNil ifFalse: [ 
@@ -22,6 +22,6 @@ typeTraitDefinitionOf: aClassDefinition
 			at: #classTraits 
 			put: aClassDefinition classTraitCompositionString ].
 	
-	definition at: #category put: aClassDefinition category.
+	definition at: #category put: aClassDefinition category asString.
 		
 	^ self toSTON: definition

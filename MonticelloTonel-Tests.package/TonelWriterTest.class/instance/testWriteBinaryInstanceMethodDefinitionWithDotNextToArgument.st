@@ -17,7 +17,7 @@ testWriteBinaryInstanceMethodDefinitionWithDotNextToArgument
 	self 
 		assert: stream contents 
 		equals: ('
-{ #category : #accessing }
+{ #category : ''accessing'' }
 Object >> + a [.
 	^ 42
 ]

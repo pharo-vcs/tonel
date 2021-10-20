@@ -3,8 +3,8 @@ typeClassDefinitionOf: aClassDefinition
 	| definition |
 	
 	definition := OrderedDictionary new 
-		at: #name put: aClassDefinition className; 
-		at: #superclass put: aClassDefinition superclassName;
+		at: #name put: aClassDefinition className asString; 
+		at: #superclass put: aClassDefinition superclassName asString;
 		yourself.
 
 	aClassDefinition type = #normal ifFalse: [ 
@@ -29,6 +29,6 @@ typeClassDefinitionOf: aClassDefinition
 		ifNotEmpty: [ :vars | definition at: #classInstVars put: vars asArray ].
 
 	definition 		
-		at: #category put: aClassDefinition category.
+		at: #category put: aClassDefinition category asString.
 	
 	^ self toSTON: definition

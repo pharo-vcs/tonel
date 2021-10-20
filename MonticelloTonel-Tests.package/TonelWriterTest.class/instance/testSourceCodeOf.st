@@ -10,17 +10,17 @@ Description
 I am a simple Mock for Tonel export test
 "
 Class {
-	#name : #TonelMock,
-	#superclass : #Object,
-	#category : #''MonticelloTonel-Tests''
+	#name : ''TonelMock'',
+	#superclass : ''Object'',
+	#category : ''MonticelloTonel-Tests''
 }
 
-{ #category : #accessing }
+{ #category : ''accessing'' }
 TonelMock class >> classMethod [
 	^ 8
 ]
 
-{ #category : #accessing }
+{ #category : ''accessing'' }
 TonelMock >> instanceMethod [
 	^ true
 ]

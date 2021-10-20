@@ -25,11 +25,11 @@ testWriteClassDefinitionWithTraitComposition
 comment test
 "
 Class {
-	#name : #SomeObject,
-	#superclass : #Object,
+	#name : ''SomeObject'',
+	#superclass : ''Object'',
 	#traits : ''T1 + T2'',
 	#classTraits : ''T1 classTrait + T2 classTrait'',
-	#category : #Kernel
+	#category : ''Kernel''
 }
 ' withLineEndings: OSPlatform current lineEnding).
 
@@ -54,8 +54,8 @@ Class {
 comment test
 "
 Class {
-	#name : #SomeObject,
-	#superclass : #Object,
+	#name : ''SomeObject'',
+	#superclass : ''Object'',
 	#instVars : [
 		''a'',
 		''b'',
@@ -71,6 +71,6 @@ Class {
 	#classInstVars : [
 		''instVarA''
 	],
-	#category : #Kernel
+	#category : ''Kernel''
 }
 ' withLineEndings: OSPlatform current lineEnding).

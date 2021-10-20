@@ -17,7 +17,7 @@ testWriteKeywordInstanceMethodDefinitionWithDotNextToArgument
 	self 
 		assert: stream contents 
 		equals: ('
-{ #category : #accessing }
+{ #category : ''accessing'' }
 Object >> min: a max: b [.
 	^ 42
 ]

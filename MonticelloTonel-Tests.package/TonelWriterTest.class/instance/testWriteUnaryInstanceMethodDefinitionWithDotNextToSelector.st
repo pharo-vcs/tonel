@@ -17,7 +17,7 @@ testWriteUnaryInstanceMethodDefinitionWithDotNextToSelector
 	self 
 		assert: stream contents 
 		equals: ('
-{ #category : #accessing }
+{ #category : ''accessing'' }
 Object >> selector [.
 	^ 42
 ]

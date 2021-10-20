@@ -17,7 +17,7 @@ testWriteMethodDefinitionOn
 	self 
 		assert: stream contents 
 		equals: ('
-{ #category : #accessing }
+{ #category : ''accessing'' }
 Object >> selector [
 	^ 42
 ]
@@ -36,7 +36,7 @@ Object >> selector [
 	self 
 		assert: stream contents 
 		equals: ('
-{ #category : #accessing }
+{ #category : ''accessing'' }
 Object class >> selector [
 	^ 42
 ]
@@ -56,7 +56,7 @@ Object class >> selector [
 	self 
 		assert: stream contents 
 		equals: ('
-{ #category : #comparing }
+{ #category : ''comparing'' }
 Object >> = anObject [
 	^ self == anObject
 ]

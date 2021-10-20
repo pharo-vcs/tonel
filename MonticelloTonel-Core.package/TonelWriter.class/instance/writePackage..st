@@ -12,5 +12,5 @@ writePackage: aDefinition
 		do: [ :s | 
 			s 
 				<< 'Package ' 
-				<< (self toSTON: { #name ->  packageDir asSymbol } asDictionary) 
+				<< (self toSTON: { #name ->  packageDir asString } asDictionary) 
 				<< self newLine ]
