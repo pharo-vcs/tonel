@@ -8,7 +8,10 @@ testWriteSnapshotWithOrganizationAndOnlyOnceClassWithTag
 	  which is classified in the Package's tag 'Tag' "
 	(aSnapshot definitions
 		select: [ :def | def className ~= #MCMockClassI and: [ def isOrganizationDefinition not ]])
-		do: [ :each | aSnapshot definitions remove: each ].
+		ifNotEmpty: [ :defs | 
+			aSnapshot 
+				writeSlotNamed: 'definitions' 
+				value: (aSnapshot definitions copyWithoutAll: defs) ].
 	memoryFileReference := FileSystem memory root.
 	writer := self actualClass on: memoryFileReference.
 	writer writeSnapshot: aSnapshot.

@@ -7,9 +7,11 @@ testWriteSnapshotWithoutOrganization
 	| aSnapshot memoryFileReference writer |
 	
 	aSnapshot := self mockSnapshot copy.
-	(aSnapshot definitions select: #isOrganizationDefinition) do: [ :each | 
-		aSnapshot definitions remove: each ].
-	
+	(aSnapshot definitions select: #isOrganizationDefinition) ifNotEmpty: [ :defs |
+		aSnapshot 
+			writeSlotNamed: 'definitions' 
+			value: (aSnapshot definitions copyWithoutAll: defs) ].
+
 	memoryFileReference := FileSystem memory root.
 	writer := self actualClass on: memoryFileReference.
 	writer writeSnapshot: self mockSnapshot.
