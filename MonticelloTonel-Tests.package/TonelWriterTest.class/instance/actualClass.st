@@ -1,3 +1,4 @@
-accessing
+private
 actualClass
-	^ TonelWriter
+
+	self subclassResponsibility

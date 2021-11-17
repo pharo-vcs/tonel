@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "",
-	"super" : "TonelReaderTest",
+	"super" : "AbstractTonelTest",
 	"category" : "MonticelloTonel-Tests",
 	"classinstvars" : [ ],
 	"pools" : [ ],

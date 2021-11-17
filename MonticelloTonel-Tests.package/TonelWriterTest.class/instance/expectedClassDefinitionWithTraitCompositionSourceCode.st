@@ -1,0 +1,4 @@
+private
+expectedClassDefinitionWithTraitCompositionSourceCode
+
+	self subclassResponsibility

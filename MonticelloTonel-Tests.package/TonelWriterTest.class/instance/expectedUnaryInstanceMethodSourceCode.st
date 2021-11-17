@@ -1,0 +1,4 @@
+private
+expectedUnaryInstanceMethodSourceCode
+
+	self subclassResponsibility

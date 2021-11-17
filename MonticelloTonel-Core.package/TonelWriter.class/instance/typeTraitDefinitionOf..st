@@ -1,28 +1,28 @@
 private definitions
 typeTraitDefinitionOf: aClassDefinition
+
 	| definition |
-	
-	definition := OrderedDictionary new 
-		at: #name put: aClassDefinition className asString; 
-		yourself.
+	definition := OrderedDictionary new.
+	self at: #name put: aClassDefinition className in: definition.
 
 	aClassDefinition variables isEmptyOrNil ifFalse: [ 
-		(aClassDefinition variables select: #isInstanceVariable thenCollect: #name)
-			ifNotEmpty: [ :vars | definition at: #instVars put: vars asArray ].
-		(aClassDefinition variables select: #isClassInstanceVariable thenCollect: #name)
-			ifNotEmpty: [ :vars | definition at: #classInstVars put: vars asArray ] ].
+		(aClassDefinition variables
+			 select: #isInstanceVariable
+			 thenCollect: #name) ifNotEmpty: [ :vars | 
+			definition at: #instVars put: vars asArray ].
+		(aClassDefinition variables
+			 select: #isClassInstanceVariable
+			 thenCollect: #name) ifNotEmpty: [ :vars | 
+			definition at: #classInstVars put: vars asArray ] ].
 
 	aClassDefinition hasTraitComposition ifTrue: [ 
-		definition		
-			at: #traits 
-			put: aClassDefinition traitCompositionString ].
-		
+		definition at: #traits put: aClassDefinition traitCompositionString ].
+
 	aClassDefinition hasClassTraitComposition ifTrue: [ 
-		definition		
-			at: #classTraits 
+		definition
+			at: #classTraits
 			put: aClassDefinition classTraitCompositionString ].
 
-	"categories needs to be saved as Strings. See https://github.com/pharo-vcs/tonel/issues/52"
-	definition at: #category put: aClassDefinition category asString.
-		
+	self at: #category put: aClassDefinition category in: definition.
+
 	^ self toSTON: definition
