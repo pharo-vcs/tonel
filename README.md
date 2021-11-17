@@ -1,4 +1,4 @@
-# Tonel [![Spec-dev](https://github.com/pharo-vcs/tonel/actions/workflows/tonel.yml/badge.svg)](https://github.com/pharo-vcs/tonel/actions/workflows/tonel.yml)
+# Tonel [![Tonel-dev](https://github.com/pharo-vcs/tonel/actions/workflows/tonel.yml/badge.svg)](https://github.com/pharo-vcs/tonel/actions/workflows/tonel.yml)
 
 
 Tonel is a file-per-class format for monticello repositories.
