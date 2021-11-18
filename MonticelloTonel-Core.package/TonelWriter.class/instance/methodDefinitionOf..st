@@ -1,6 +1,7 @@
 private definitions
 methodDefinitionOf: aMethodDefinition
-	^ self toSTON: (OrderedDictionary new 
-		at: #category put: aMethodDefinition category; 
-		yourself)	
-	
+
+	| definition |
+	definition := OrderedDictionary new.
+	self at: #category put: aMethodDefinition category in: definition.
+	^ self toSTON: definition

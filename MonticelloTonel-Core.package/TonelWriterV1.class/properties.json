@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "GOC 11/17/2021 17:31",
+	"super" : "TonelWriter",
+	"category" : "MonticelloTonel-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "TonelWriterV1",
+	"type" : "normal"
+}

@@ -1,0 +1,4 @@
+private
+expectedSomeObjectClassDefinitionSourceCode
+
+	^ self subclassResponsibility
