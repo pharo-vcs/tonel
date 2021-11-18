@@ -1,4 +1,6 @@
 instance creation
 new
+
 	"This is to keep backward-compatibility - gcotelli"
-	^TonelWriterV1 new
+
+	^ (self forVersion: self defaultVersion) new
