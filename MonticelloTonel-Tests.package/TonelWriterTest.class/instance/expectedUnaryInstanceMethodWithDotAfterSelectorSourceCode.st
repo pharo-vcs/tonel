@@ -1,0 +1,4 @@
+private
+expectedUnaryInstanceMethodWithDotAfterSelectorSourceCode
+
+	^ self subclassResponsibility

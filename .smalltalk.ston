@@ -1,10 +1,12 @@
 SmalltalkCISpec {
-  #name : 'Tonel',
-  #preLoading: 'scripts/preLoading.st',
+  #preLoading : '.github/scripts/preLoading.st',
   #loading : [
     SCIMetacelloLoadSpec {
       #baseline : 'Tonel',
-      #onWarningLog : true
+      #directory : '.',
+      #onConflict : #useIncoming,
+      #onUpgrade : #useIncoming,
+      #ignoreImage : true
     }
   ]
 }

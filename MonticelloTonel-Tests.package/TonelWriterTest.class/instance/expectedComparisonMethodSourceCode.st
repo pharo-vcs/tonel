@@ -1,0 +1,4 @@
+private
+expectedComparisonMethodSourceCode
+
+	self subclassResponsibility

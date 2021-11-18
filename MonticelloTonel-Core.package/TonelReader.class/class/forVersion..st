@@ -1,0 +1,4 @@
+accessing
+forVersion: aVersion
+
+	^ self

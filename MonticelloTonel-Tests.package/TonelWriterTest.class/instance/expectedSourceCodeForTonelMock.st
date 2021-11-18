@@ -1,0 +1,4 @@
+private
+expectedSourceCodeForTonelMock
+
+	^ self subclassResponsibility

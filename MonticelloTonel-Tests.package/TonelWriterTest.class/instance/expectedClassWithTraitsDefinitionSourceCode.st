@@ -1,0 +1,4 @@
+private
+expectedClassWithTraitsDefinitionSourceCode
+
+	^ self subclassResponsibility

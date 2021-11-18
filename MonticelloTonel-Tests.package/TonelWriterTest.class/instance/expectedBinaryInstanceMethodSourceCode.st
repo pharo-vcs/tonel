@@ -1,0 +1,4 @@
+private
+expectedBinaryInstanceMethodSourceCode
+
+	self subclassResponsibility
