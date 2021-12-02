@@ -13,7 +13,7 @@ expectedMTMockASubclassClassSt
 }
 
 { #category : ''as yet unclassified'' }
-MCMockASubclass class >> initialize [
+MTMockASubclass class >> initialize [
 
 	InitializationOrder := InitializationOrder
 		ifNil: [ -100 ] "let the test fail"
