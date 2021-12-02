@@ -1,0 +1,19 @@
+{
+	"commentStamp" : "TorstenBergmann 12/2/2021 15:17",
+	"super" : "MCMock",
+	"category" : "MonticelloTonel-Mocks",
+	"classinstvars" : [
+		"ciVar"
+	],
+	"pools" : [
+		"MCMockAPoolDictionary"
+	],
+	"classvars" : [
+		"CVar"
+	],
+	"instvars" : [
+		"ivarb"
+	],
+	"name" : "MTMockClassB",
+	"type" : "normal"
+}
