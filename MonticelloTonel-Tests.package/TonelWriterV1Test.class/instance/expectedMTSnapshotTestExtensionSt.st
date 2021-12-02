@@ -1,5 +1,5 @@
 private
-expectedMCSnapshotTestExtensionSt
+expectedMTSnapshotTestExtensionSt
 	^ 'Extension { #name : #MCSnapshotTest }
 
 { #category : #''*MonticelloTonel-Tests-Mocks'' }

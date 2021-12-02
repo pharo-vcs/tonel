@@ -1,4 +1,4 @@
 private
-expectedMCSnapshotTestExtensionSt
+expectedMTMockClassAClassSt
 
 	^ self subclassResponsibility

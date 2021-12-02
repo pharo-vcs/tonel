@@ -1,5 +1,5 @@
 private
-expectedMCMockASubclassClassSt
+expectedMTMockASubclassClassSt
 	^ 'Class {
 	#name : ''MTMockASubclass'',
 	#superclass : ''MTMockClassA'',

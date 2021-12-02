@@ -10,7 +10,7 @@ I am a simple Mock for Tonel export test
 Class {
 	#name : #TonelMock,
 	#superclass : #Object,
-	#category : #''MonticelloTonel-Tests''
+	#category : #''MonticelloTonel-Tests-Mocking''
 }
 
 { #category : #accessing }

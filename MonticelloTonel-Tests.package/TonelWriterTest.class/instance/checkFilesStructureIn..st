@@ -22,10 +22,10 @@ checkFilesStructureIn: aFileReference
 	nl := OSPlatform current lineEnding.
 	self 
 		assert: (aFileReference / 'MonticelloTonel-Tests-Mocks' / 'MTMockClassA.class.st') contents
-		equals: (self expectedMCMockClassAClassSt withLineEndings: nl).
+		equals: (self expectedMTMockClassAClassSt withLineEndings: nl).
 	self 
 		assert: (aFileReference / 'MonticelloTonel-Tests-Mocks' / 'MTMockASubclass.class.st') contents
-		equals: (self expectedMCMockASubclassClassSt withLineEndings: nl).
+		equals: (self expectedMTMockASubclassClassSt withLineEndings: nl).
 	self 
 		assert: (aFileReference / 'MonticelloTonel-Tests-Mocks' / 'MTSnapshotTest.extension.st') contents
-		equals: (self expectedMCSnapshotTestExtensionSt withLineEndings: nl)
+		equals: (self expectedMTSnapshotTestExtensionSt withLineEndings: nl)

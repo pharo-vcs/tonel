@@ -1,4 +1,4 @@
 private
-expectedMCMockClassAClassSt
+expectedMTMockASubclassClassSt
 
 	^ self subclassResponsibility
