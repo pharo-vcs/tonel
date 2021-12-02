@@ -1,1 +1,0 @@
-A mock class to verify serialization using Tonel format (as a subclass of MTMockClassA)
