@@ -1,7 +1,7 @@
 private
 expectedMTMockClassAClassSt
 	^ '"
-This is a mock class. The Monticello tests manipulated it to simulate a developer modifying code in the image.
+A mock class to verify serialization using Tonel format
 "
 Class {
 	#name : #MTMockClassA,

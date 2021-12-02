@@ -7,6 +7,8 @@ checkFilesStructureIn: aFileReference
 	self 
 		assert: ((aFileReference / 'MonticelloTonel-Tests-Mocks') entries collect: #basename) 
 		equals: #(
+			'MTMock.class.st'
+			'MTMockAPoolDictionary.class.st'
 			'MTMockASubclass.class.st' 
 			'MTMockClassA.class.st' 
 			'MTMockClassB.class.st' 
@@ -16,7 +18,7 @@ checkFilesStructureIn: aFileReference
 			'MTMockClassG.class.st' 
 			'MTMockClassH.class.st' 
 			'MTMockClassI.class.st'
-			'MCSnapshotTest.extension.st'
+"			'MCSnapshotTest.extension.st'"
 			'package.st').
 	
 	nl := OSPlatform current lineEnding.
