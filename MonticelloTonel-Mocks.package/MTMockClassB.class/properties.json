@@ -1,12 +1,12 @@
 {
 	"commentStamp" : "TorstenBergmann 12/2/2021 15:17",
-	"super" : "MCMock",
+	"super" : "MTMock",
 	"category" : "MonticelloTonel-Mocks",
 	"classinstvars" : [
 		"ciVar"
 	],
 	"pools" : [
-		"MCMockAPoolDictionary"
+		"MTMockAPoolDictionary"
 	],
 	"classvars" : [
 		"CVar"
