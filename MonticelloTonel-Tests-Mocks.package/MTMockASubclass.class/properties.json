@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "TorstenBergmann 12/2/2021 15:17",
 	"super" : "MTMockClassA",
-	"category" : "MonticelloTonel-Tests-Mocks",
+	"category" : "MonticelloTonel-Tests-Mocks-Base",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [

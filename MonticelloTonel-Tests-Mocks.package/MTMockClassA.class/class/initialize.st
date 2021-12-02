@@ -1,4 +1,5 @@
-as yet unclassified
+class initialization
 initialize
+
 	CVar := #initialized.
-	InitializationOrder := 1.
+	InitializationOrder := 1

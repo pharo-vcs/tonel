@@ -1,4 +1,4 @@
 accessing
-two
+foo
 
-	^ 2
+	^ Foo

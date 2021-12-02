@@ -1,6 +1,6 @@
-as yet unclassified
+class initialization
 initialize
 
 	InitializationOrder := InitializationOrder
-		ifNil: [ -100 ] "let the test fail"
-		ifNotNil: [ InitializationOrder + 1.]
+		                       ifNil: [ "let the test fail" -100 ]
+		                       ifNotNil: [ InitializationOrder + 1 ]
