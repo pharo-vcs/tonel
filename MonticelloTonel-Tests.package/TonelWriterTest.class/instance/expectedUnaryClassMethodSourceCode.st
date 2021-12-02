@@ -1,4 +1,4 @@
 private
 expectedUnaryClassMethodSourceCode
 
-	self subclassResponsibility
+	^ self subclassResponsibility

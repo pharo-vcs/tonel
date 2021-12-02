@@ -7,10 +7,10 @@ testHiddenFilesAreIgnored
 		mem := self
 			       newMemoryFileSystemSnapshot: snapshot
 			       writtenBy: writerClass.
-		(mem / 'MonticelloMocks' / '._MCMockClassG.class.st')
+		(mem / 'MonticelloTonel-Tests-Mocks' / '._MTMockClassG.class.st')
 			ensureCreateFile;
 			writeStreamDo: [ :s | s << 'This file should be ignored' ].
-		reader := TonelReader on: mem fileName: 'MonticelloMocks'.
+		reader := TonelReader on: mem fileName: 'MonticelloTonel-Tests-Mocks'.
 		reader loadDefinitions.
 
 		self

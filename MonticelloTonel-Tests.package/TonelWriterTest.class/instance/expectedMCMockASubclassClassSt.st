@@ -1,4 +1,4 @@
 private
 expectedMCMockASubclassClassSt
 
-	self subclassResponsibility
+	^ self subclassResponsibility

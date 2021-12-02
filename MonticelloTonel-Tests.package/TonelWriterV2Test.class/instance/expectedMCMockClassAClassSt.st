@@ -4,8 +4,8 @@ expectedMCMockClassAClassSt
 This is a mock class. The Monticello tests manipulated it to simulate a developer modifying code in the image.
 "
 Class {
-	#name : ''MCMockClassA'',
-	#superclass : ''MCMock'',
+	#name : ''MTMockClassA'',
+	#superclass : ''MTMock'',
 	#instVars : [
 		''ivar''
 	],
@@ -13,85 +13,85 @@ Class {
 		''CVar'',
 		''InitializationOrder''
 	],
-	#category : ''MonticelloMocks''
+	#category : ''MonticelloTonel-Tests-Mocks''
 }
 
 { #category : ''as yet unclassified'' }
-MCMockClassA class >> cVar [
+MTMockClassA class >> cVar [
 	^ CVar
 ]
 
 { #category : ''as yet unclassified'' }
-MCMockClassA class >> initializationOrder [
+MTMockClassA class >> initializationOrder [
 
 	^ InitializationOrder
 ]
 
 { #category : ''as yet unclassified'' }
-MCMockClassA class >> initialize [
+MTMockClassA class >> initialize [
 	CVar := #initialized.
 	InitializationOrder := 1.
 
 ]
 
 { #category : ''as yet unclassified'' }
-MCMockClassA class >> one [
+MTMockClassA class >> one [
 
 	^ 1
 ]
 
 { #category : ''as yet unclassified'' }
-MCMockClassA class >> touchCVar [
+MTMockClassA class >> touchCVar [
 	CVar := #touched
 ]
 
 { #category : ''numeric'' }
-MCMockClassA >> a [
+MTMockClassA >> a [
 	^ ''a2''
 ]
 
 { #category : ''numeric'' }
-MCMockClassA >> b [
+MTMockClassA >> b [
 	^ ''b1''
 ]
 
 { #category : ''numeric'' }
-MCMockClassA >> c [
+MTMockClassA >> c [
 	^ ''c1''
 ]
 
 { #category : ''numeric'' }
-MCMockClassA >> d [
+MTMockClassA >> d [
 	^ ''d''
 ]
 
 { #category : ''boolean'' }
-MCMockClassA >> falsehood [
+MTMockClassA >> falsehood [
 	^ false
 ]
 
 { #category : ''boolean'' }
-MCMockClassA >> moreTruth [
+MTMockClassA >> moreTruth [
 
 	^ true
 ]
 
 { #category : ''numeric'' }
-MCMockClassA >> one [
+MTMockClassA >> one [
 	^ 1
 ]
 
 { #category : ''drag\''n\''drop'' }
-MCMockClassA >> q [
+MTMockClassA >> q [
 ]
 
 { #category : ''boolean'' }
-MCMockClassA >> truth [
+MTMockClassA >> truth [
 	^ true
 ]
 
 { #category : ''numeric'' }
-MCMockClassA >> two [
+MTMockClassA >> two [
 	^ 2
 ]
 '

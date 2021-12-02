@@ -7,5 +7,5 @@ testLoadAllFileNames
 	
 	self 
 		assert: repository allFileNames 
-		equals: #('MonticelloMocks')
+		equals: #('MonticelloTonel-Tests-Mocks')
 		

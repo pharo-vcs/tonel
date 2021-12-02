@@ -1,15 +1,15 @@
 private
 expectedMCMockASubclassClassSt
 	^ 'Class {
-	#name : ''MCMockASubclass'',
-	#superclass : ''MCMockClassA'',
+	#name : ''MTMockASubclass'',
+	#superclass : ''MTMockClassA'',
 	#instVars : [
 		''x''
 	],
 	#classVars : [
 		''Y''
 	],
-	#category : ''MonticelloMocks''
+	#category : ''MonticelloTonel-Tests-Mocks''
 }
 
 { #category : ''as yet unclassified'' }
@@ -21,12 +21,12 @@ MCMockASubclass class >> initialize [
 ]
 
 { #category : ''as yet unclassified'' }
-MCMockASubclass >> variables [
-	^ x + Y + MCMockClassA
+MTMockASubclass >> variables [
+	^ x + Y + MTMockClassA
 ]
 
 { #category : ''as yet unclassified'' }
-MCMockASubclass >> variables2 [
+MTMockASubclass >> variables2 [
 	^ ivar + CVar
 ]
 '

@@ -3,29 +3,29 @@ checkFilesStructureIn: aFileReference
 
 	| nl |
 	
-	self assert: (aFileReference / 'MonticelloMocks') exists.
+	self assert: (aFileReference / 'MonticelloTonel-Tests-Mocks') exists.
 	self 
-		assert: ((aFileReference / 'MonticelloMocks') entries collect: #basename) 
+		assert: ((aFileReference / 'MonticelloTonel-Tests-Mocks') entries collect: #basename) 
 		equals: #(
-			'MCMockASubclass.class.st' 
-			'MCMockClassA.class.st' 
-			'MCMockClassB.class.st' 
-			'MCMockClassD.class.st' 
-			'MCMockClassE.class.st' 
-			'MCMockClassF.class.st' 
-			'MCMockClassG.class.st' 
-			'MCMockClassH.class.st' 
-			'MCMockClassI.class.st'
+			'MTMockASubclass.class.st' 
+			'MTMockClassA.class.st' 
+			'MTMockClassB.class.st' 
+			'MTMockClassD.class.st' 
+			'MTMockClassE.class.st' 
+			'MTMockClassF.class.st' 
+			'MTMockClassG.class.st' 
+			'MTMockClassH.class.st' 
+			'MTMockClassI.class.st'
 			'MCSnapshotTest.extension.st'
 			'package.st').
 	
 	nl := OSPlatform current lineEnding.
 	self 
-		assert: (aFileReference / 'MonticelloMocks' / 'MCMockClassA.class.st') contents
+		assert: (aFileReference / 'MonticelloTonel-Tests-Mocks' / 'MTMockClassA.class.st') contents
 		equals: (self expectedMCMockClassAClassSt withLineEndings: nl).
 	self 
-		assert: (aFileReference / 'MonticelloMocks' / 'MCMockASubclass.class.st') contents
+		assert: (aFileReference / 'MonticelloTonel-Tests-Mocks' / 'MTMockASubclass.class.st') contents
 		equals: (self expectedMCMockASubclassClassSt withLineEndings: nl).
 	self 
-		assert: (aFileReference / 'MonticelloMocks' / 'MCSnapshotTest.extension.st') contents
+		assert: (aFileReference / 'MonticelloTonel-Tests-Mocks' / 'MTSnapshotTest.extension.st') contents
 		equals: (self expectedMCSnapshotTestExtensionSt withLineEndings: nl)
