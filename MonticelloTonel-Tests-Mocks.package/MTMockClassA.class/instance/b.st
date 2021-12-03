@@ -1,3 +1,4 @@
 numeric
 b
+
 	^ 'b1'

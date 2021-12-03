@@ -18,7 +18,8 @@ checkFilesStructureIn: aFileReference
 			'MTMockClassG.class.st' 
 			'MTMockClassH.class.st' 
 			'MTMockClassI.class.st'
-"			'MCSnapshotTest.extension.st'"
+			'ManifestMonticelloTonelTestsMocks.class.st'
+			'TonelWriter.extension.st'
 			'package.st').
 	
 	nl := OSPlatform current lineEnding.
@@ -29,5 +30,5 @@ checkFilesStructureIn: aFileReference
 		assert: (aFileReference / 'MonticelloTonel-Tests-Mocks' / 'MTMockASubclass.class.st') contents
 		equals: (self expectedMTMockASubclassClassSt withLineEndings: nl).
 	self 
-		assert: (aFileReference / 'MonticelloTonel-Tests-Mocks' / 'MTSnapshotTest.extension.st') contents
-		equals: (self expectedMTSnapshotTestExtensionSt withLineEndings: nl)
+		assert: (aFileReference / 'MonticelloTonel-Tests-Mocks' / 'TonelWriter.extension.st') contents
+		equals: (self expectedTonelWriterExtensionSt withLineEndings: nl)

@@ -1,4 +1,4 @@
 private
-expectedMTSnapshotTestExtensionSt
+expectedTonelWriterExtensionSt
 
 	^ self subclassResponsibility

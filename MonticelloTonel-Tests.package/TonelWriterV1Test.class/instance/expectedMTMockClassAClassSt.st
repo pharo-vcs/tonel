@@ -13,61 +13,73 @@ Class {
 		''CVar'',
 		''InitializationOrder''
 	],
-	#category : #''MonticelloTonel-Tests-Mocks''
+	#category : #''MonticelloTonel-Tests-Mocks-Base''
 }
 
-{ #category : #''as yet unclassified'' }
+{ #category : #accessing }
 MTMockClassA class >> cVar [
+
 	^ CVar
 ]
 
-{ #category : #''as yet unclassified'' }
+{ #category : #accessing }
 MTMockClassA class >> initializationOrder [
 
 	^ InitializationOrder
 ]
 
-{ #category : #''as yet unclassified'' }
+{ #category : #''class initialization'' }
 MTMockClassA class >> initialize [
-	CVar := #initialized.
-	InitializationOrder := 1.
 
+	CVar := #initialized.
+	InitializationOrder := 1
 ]
 
-{ #category : #''as yet unclassified'' }
+{ #category : #accessing }
 MTMockClassA class >> one [
 
 	^ 1
 ]
 
-{ #category : #''as yet unclassified'' }
+{ #category : #operating }
 MTMockClassA class >> touchCVar [
+
 	CVar := #touched
 ]
 
 { #category : #numeric }
 MTMockClassA >> a [
+
 	^ ''a2''
 ]
 
 { #category : #numeric }
 MTMockClassA >> b [
+
 	^ ''b1''
 ]
 
 { #category : #numeric }
 MTMockClassA >> c [
+
 	^ ''c1''
 ]
 
 { #category : #numeric }
 MTMockClassA >> d [
+
 	^ ''d''
 ]
 
 { #category : #boolean }
 MTMockClassA >> falsehood [
+
 	^ false
+]
+
+{ #category : #''don\''nt remove'' }
+MTMockClassA >> methodInCategoryWithApostrophe [
+	"A method that is grouped in a method category with an apostrophe"
 ]
 
 { #category : #boolean }
@@ -78,20 +90,19 @@ MTMockClassA >> moreTruth [
 
 { #category : #numeric }
 MTMockClassA >> one [
-	^ 1
-]
 
-{ #category : #''drag\''n\''drop'' }
-MTMockClassA >> q [
+	^ 1
 ]
 
 { #category : #boolean }
 MTMockClassA >> truth [
+
 	^ true
 ]
 
 { #category : #numeric }
 MTMockClassA >> two [
+
 	^ 2
 ]
 '

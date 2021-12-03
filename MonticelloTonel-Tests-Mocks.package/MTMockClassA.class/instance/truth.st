@@ -1,3 +1,4 @@
 boolean
 truth
+
 	^ true

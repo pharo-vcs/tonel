@@ -1,3 +1,4 @@
 accessing
 one
+
 	^ 1
