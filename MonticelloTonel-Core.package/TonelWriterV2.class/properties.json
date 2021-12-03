@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "GOC 11/17/2021 17:32",
 	"super" : "TonelWriter",
-	"category" : "MonticelloTonel-Core",
+	"category" : "MonticelloTonel-Core-Writing",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],

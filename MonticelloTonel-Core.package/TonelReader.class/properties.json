@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "GuillermoPolito 7/11/2018 11:02",
 	"super" : "MCVersionReader",
-	"category" : "MonticelloTonel-Core",
+	"category" : "MonticelloTonel-Core-Reading",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
