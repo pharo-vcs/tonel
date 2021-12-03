@@ -10,6 +10,6 @@
 	"instvars" : [
 		"x"
 	],
-	"name" : "MTMockASubclass",
+	"name" : "MTMockSubclassOfA",
 	"type" : "normal"
 }

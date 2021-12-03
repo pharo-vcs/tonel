@@ -4,7 +4,7 @@ expectedMTMockASubclassClassSt
 A mock class to verify serialization using Tonel format (as a subclass of MTMockClassA)
 "
 Class {
-	#name : ''MTMockASubclass'',
+	#name : ''MTMockSubclassOfA'',
 	#superclass : ''MTMockClassA'',
 	#instVars : [
 		''x''
@@ -16,7 +16,7 @@ Class {
 }
 
 { #category : ''class initialization'' }
-MTMockASubclass class >> initialize [
+MTMockSubclassOfA class >> initialize [
 
 	InitializationOrder := InitializationOrder
 										ifNil: [ "let the test fail" -100 ]
@@ -24,13 +24,13 @@ MTMockASubclass class >> initialize [
 ]
 
 { #category : ''accessing'' }
-MTMockASubclass >> variables [
+MTMockSubclassOfA >> variables [
 
 	^ x + Y + MTMockClassA
 ]
 
 { #category : ''accessing'' }
-MTMockASubclass >> variables2 [
+MTMockSubclassOfA >> variables2 [
 
 	^ ivar + CVar
 ]
