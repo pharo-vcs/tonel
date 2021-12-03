@@ -8,6 +8,6 @@
 	"instvars" : [
 		"snapshot"
 	],
-	"name" : "MTSnapshotResource",
+	"name" : "TonelSnapshotResource",
 	"type" : "normal"
 }

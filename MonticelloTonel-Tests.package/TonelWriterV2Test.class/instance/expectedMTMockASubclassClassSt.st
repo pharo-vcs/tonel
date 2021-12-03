@@ -1,7 +1,7 @@
 private
 expectedMTMockASubclassClassSt
 	^ '"
-A mock class to verify serialization using Tonel format (as a subclass of MTMockClassA)
+A mock class to verify serialization using Tonel format (as a subclass of MTMockClassA) with an instance and a class variable
 "
 Class {
 	#name : ''MTMockSubclassOfA'',

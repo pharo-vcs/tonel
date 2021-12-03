@@ -15,11 +15,13 @@ Class {
 
 { #category : #accessing }
 TonelMock class >> classMethod [
+
 	^ 8
 ]
 
 { #category : #accessing }
 TonelMock >> instanceMethod [
+
 	^ true
 ]
 '

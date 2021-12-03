@@ -1,4 +1,4 @@
 mocks
 mockSnapshot
 
-	^ MTSnapshotResource current snapshot
+	^ TonelSnapshotResource current snapshot
