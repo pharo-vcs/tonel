@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "",
 	"super" : "MCTestCase",
-	"category" : "MonticelloTonel-Tests",
+	"category" : "MonticelloTonel-Tests-Base",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],

@@ -1,0 +1,4 @@
+numeric
+one
+
+	^ 1

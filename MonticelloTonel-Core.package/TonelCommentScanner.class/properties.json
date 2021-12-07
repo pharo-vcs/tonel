@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "<historical>",
 	"super" : "TonelScanner",
-	"category" : "MonticelloTonel-Core",
+	"category" : "MonticelloTonel-Core-Reading",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],

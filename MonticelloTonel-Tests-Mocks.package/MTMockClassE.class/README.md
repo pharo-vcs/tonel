@@ -1,0 +1,1 @@
+A variable subclass of Object used as a mock class to verify serialization using Tonel format

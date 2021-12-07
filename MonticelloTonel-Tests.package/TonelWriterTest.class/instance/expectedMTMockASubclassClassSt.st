@@ -1,0 +1,4 @@
+private
+expectedMTMockASubclassClassSt
+
+	^ self subclassResponsibility

@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "TorstenBergmann 12/3/2021 01:36",
+	"super" : "MTMockClassA",
+	"category" : "MonticelloTonel-Tests-Mocks-Base",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [
+		"Y"
+	],
+	"instvars" : [
+		"x"
+	],
+	"name" : "MTMockSubclassOfA",
+	"type" : "normal"
+}

@@ -1,0 +1,4 @@
+boolean
+falsehood
+
+	^ false

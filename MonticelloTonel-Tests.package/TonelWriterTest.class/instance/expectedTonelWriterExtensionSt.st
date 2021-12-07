@@ -1,0 +1,4 @@
+private
+expectedTonelWriterExtensionSt
+
+	^ self subclassResponsibility

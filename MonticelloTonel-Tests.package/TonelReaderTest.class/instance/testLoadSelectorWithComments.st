@@ -7,7 +7,7 @@ testLoadSelectorWithComments
 		mem := self
 			       newMemoryFileSystemSnapshot: snapshot
 			       writtenBy: writerClass.
-		reader := TonelReader on: mem fileName: 'MonticelloMocks'.
+		reader := TonelReader on: mem fileName: 'MonticelloTonel-Tests-Mocks'.
 		reader loadDefinitions.
 
 		self

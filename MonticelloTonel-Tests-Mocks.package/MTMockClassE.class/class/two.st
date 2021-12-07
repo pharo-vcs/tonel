@@ -1,0 +1,4 @@
+accessing
+two
+
+	^ 2

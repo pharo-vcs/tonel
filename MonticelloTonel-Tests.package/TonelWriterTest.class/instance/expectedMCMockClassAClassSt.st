@@ -1,4 +1,0 @@
-private
-expectedMCMockClassAClassSt
-
-	self subclassResponsibility

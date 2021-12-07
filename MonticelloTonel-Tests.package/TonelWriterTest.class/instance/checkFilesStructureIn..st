@@ -3,29 +3,32 @@ checkFilesStructureIn: aFileReference
 
 	| nl |
 	
-	self assert: (aFileReference / 'MonticelloMocks') exists.
+	self assert: (aFileReference / 'MonticelloTonel-Tests-Mocks') exists.
 	self 
-		assert: ((aFileReference / 'MonticelloMocks') entries collect: #basename) 
+		assert: ((aFileReference / 'MonticelloTonel-Tests-Mocks') entries collect: #basename) 
 		equals: #(
-			'MCMockASubclass.class.st' 
-			'MCMockClassA.class.st' 
-			'MCMockClassB.class.st' 
-			'MCMockClassD.class.st' 
-			'MCMockClassE.class.st' 
-			'MCMockClassF.class.st' 
-			'MCMockClassG.class.st' 
-			'MCMockClassH.class.st' 
-			'MCMockClassI.class.st'
-			'MCSnapshotTest.extension.st'
+			'MTMock.class.st'
+			'MTMockAPoolDictionary.class.st'			 
+			'MTMockClassA.class.st' 
+			'MTMockClassB.class.st' 
+			'MTMockClassD.class.st' 
+			'MTMockClassE.class.st' 
+			'MTMockClassF.class.st' 
+			'MTMockClassG.class.st' 
+			'MTMockClassH.class.st' 
+			'MTMockClassI.class.st'
+			'MTMockSubclassOfA.class.st'
+			'ManifestMonticelloTonelTestsMocks.class.st'
+			'TonelWriter.extension.st'
 			'package.st').
 	
 	nl := OSPlatform current lineEnding.
 	self 
-		assert: (aFileReference / 'MonticelloMocks' / 'MCMockClassA.class.st') contents
-		equals: (self expectedMCMockClassAClassSt withLineEndings: nl).
+		assert: (aFileReference / 'MonticelloTonel-Tests-Mocks' / 'MTMockClassA.class.st') contents
+		equals: (self expectedMTMockClassAClassSt withLineEndings: nl).
 	self 
-		assert: (aFileReference / 'MonticelloMocks' / 'MCMockASubclass.class.st') contents
-		equals: (self expectedMCMockASubclassClassSt withLineEndings: nl).
+		assert: (aFileReference / 'MonticelloTonel-Tests-Mocks' / 'MTMockSubclassOfA.class.st') contents
+		equals: (self expectedMTMockASubclassClassSt withLineEndings: nl).
 	self 
-		assert: (aFileReference / 'MonticelloMocks' / 'MCSnapshotTest.extension.st') contents
-		equals: (self expectedMCSnapshotTestExtensionSt withLineEndings: nl)
+		assert: (aFileReference / 'MonticelloTonel-Tests-Mocks' / 'TonelWriter.extension.st') contents
+		equals: (self expectedTonelWriterExtensionSt withLineEndings: nl)

@@ -1,0 +1,1 @@
+A mock class to verify serialization using Tonel format. This class has a class variable Foo

@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "TorstenBergmann 12/2/2021 22:49",
+	"super" : "TestResource",
+	"category" : "MonticelloTonel-Tests-Resources",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"snapshot"
+	],
+	"name" : "TonelSnapshotResource",
+	"type" : "normal"
+}

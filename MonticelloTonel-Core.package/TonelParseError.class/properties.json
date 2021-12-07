@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "EstebanLorenzano 9/11/2017 11:53",
 	"super" : "Error",
-	"category" : "MonticelloTonel-Core",
+	"category" : "MonticelloTonel-Core-Errors",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],

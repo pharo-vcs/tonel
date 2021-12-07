@@ -1,0 +1,4 @@
+accessing
+one
+
+	^ 1

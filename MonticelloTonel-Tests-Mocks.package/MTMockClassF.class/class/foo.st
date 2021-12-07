@@ -1,0 +1,4 @@
+accessing
+foo
+
+	^ Foo
