@@ -1,3 +1,4 @@
 utilities
 default
-    self subclassResponsibility
+
+	self subclassResponsibility

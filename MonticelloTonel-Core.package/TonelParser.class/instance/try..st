@@ -1,6 +1,7 @@
-private parsing
+private - parsing
 try: aBlock
-	^ self 
-		try: aBlock 
-		onSuccess: [ :parsedValue | parsedValue ] 
-		onFailure: [ nil ]
+
+	^ self
+		  try: aBlock
+		  onSuccess: [ :parsedValue | parsedValue ]
+		  onFailure: [ nil ]

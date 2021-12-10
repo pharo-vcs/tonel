@@ -1,3 +1,4 @@
 utilities
 directoryFromEntry: directoryEntry
-    ^ directoryEntry asFileReference
+
+	^ directoryEntry asFileReference

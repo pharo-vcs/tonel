@@ -1,3 +1,4 @@
 utilities
 directoryFromPath: directoryPath
-    self subclassResponsibility
+
+	self subclassResponsibility

@@ -1,3 +1,4 @@
 utilities
 directoryExists: aDirectory
-    ^ aDirectory isDirectory
+
+	^ aDirectory isDirectory

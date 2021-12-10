@@ -1,7 +1,7 @@
 tests
 testExtractSelectorWithComments
-	| parser |
-	
+
+	| parser |	
 	parser := TonelParser new.
 	
 	self assert: (parser extractSelector: 'unary "comment"') equals: #unary.

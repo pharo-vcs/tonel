@@ -1,7 +1,7 @@
 tests
 testScanMethodWithLotsOfSpecials
-	| scanner |
-	
+
+	| scanner |	
 	scanner := TonelSourceScanner on: '[
 	"Do not allow whitespace between # and the literal."
 

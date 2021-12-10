@@ -1,5 +1,6 @@
 tests
 testTypeDef
+
 	self 
 		assertParse: '
 "

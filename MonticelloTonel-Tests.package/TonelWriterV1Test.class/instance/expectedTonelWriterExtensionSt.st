@@ -1,5 +1,6 @@
 private
 expectedTonelWriterExtensionSt
+
 	^ 'Extension { #name : #TonelWriter }
 
 { #category : #''*MonticelloTonel-Tests-Mocks'' }

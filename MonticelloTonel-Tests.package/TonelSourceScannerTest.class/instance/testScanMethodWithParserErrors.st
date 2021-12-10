@@ -1,7 +1,7 @@
 tests
 testScanMethodWithParserErrors
-	| scanner |
-	
+
+	| scanner |	
 	scanner := TonelSourceScanner on: '[#(#(''self foo. + 3'' 11) #(''#('' 3) #(''self 0'' 6) #(''self asdf;;asfd'' 11))]' readStream.
 	self 
 		assert: scanner scan 

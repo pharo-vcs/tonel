@@ -1,4 +1,4 @@
-private writing
+private - writing
 writeClassDefinition: aClassDefinition on: aStream
 	| nl |
 	nl := self newLine.

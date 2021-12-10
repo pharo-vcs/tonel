@@ -1,3 +1,4 @@
 utilities
 filePathExists: filePath relativeTo: aDirectory
-    ^ (aDirectory resolveString: filePath) isFile
+
+	^ (aDirectory resolveString: filePath) isFile

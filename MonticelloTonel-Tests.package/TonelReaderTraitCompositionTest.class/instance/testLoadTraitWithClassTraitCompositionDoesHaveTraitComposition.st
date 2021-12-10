@@ -1,7 +1,7 @@
 tests
 testLoadTraitWithClassTraitCompositionDoesHaveTraitComposition
-	| classDefinition |
 
+	| classDefinition |
 	classDefinition := self 
 		readDefinitionOfClass: 'SomeTrait' 
 		fromPackage: 'MonticelloTonel-Tests'
@@ -13,4 +13,4 @@ testLoadTraitWithClassTraitCompositionDoesHaveTraitComposition
 	#category : #''MonticelloTonel-Tests''
 }' ].
 
-	self assert: classDefinition hasClassTraitComposition.
+	self assert: classDefinition hasClassTraitComposition

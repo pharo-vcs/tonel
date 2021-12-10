@@ -1,4 +1,4 @@
 private
 expectedComparisonMethodSourceCode
 
-	self subclassResponsibility
+	^ self subclassResponsibility

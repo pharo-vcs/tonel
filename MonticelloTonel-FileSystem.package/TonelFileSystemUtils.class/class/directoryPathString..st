@@ -1,3 +1,4 @@
 utilities
 directoryPathString: aDirectory
-    ^ aDirectory pathString
+
+	^ aDirectory pathString

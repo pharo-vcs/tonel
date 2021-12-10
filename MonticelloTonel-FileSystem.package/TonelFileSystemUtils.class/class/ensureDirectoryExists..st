@@ -1,3 +1,4 @@
 utilities
 ensureDirectoryExists: aDirectory
-    aDirectory ensureCreateDirectory
+
+	aDirectory ensureCreateDirectory

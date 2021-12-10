@@ -1,5 +1,6 @@
 tests
 testMethod
+
 	self 
 		assertParse: 'Object>>name' 
 		rule: #method

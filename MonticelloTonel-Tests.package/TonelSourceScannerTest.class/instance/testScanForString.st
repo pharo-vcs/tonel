@@ -1,7 +1,7 @@
 tests
 testScanForString
-	| scanner |
 
+	| scanner |
 	scanner := TonelSourceScanner on: '''-.*$''' readStream.
 	scanner prepareToScan.
 	scanner readNext. 

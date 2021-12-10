@@ -1,3 +1,4 @@
 utilities
 directoryName: aDirectory
-    ^ aDirectory basename
+
+	^ aDirectory basename

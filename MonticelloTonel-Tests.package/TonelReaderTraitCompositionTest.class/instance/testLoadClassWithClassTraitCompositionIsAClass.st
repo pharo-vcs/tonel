@@ -1,7 +1,7 @@
 tests
 testLoadClassWithClassTraitCompositionIsAClass
-	| classDefinition |
 
+	| classDefinition |
 	classDefinition := self 
 		readDefinitionOfClass: 'SomeObject' 
 		fromPackage: 'MonticelloTonel-Tests'

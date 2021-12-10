@@ -1,5 +1,6 @@
 tests
 assertClassDefinition: a and: b
+
 	self assert: a className equals: b className.
 	self assert: a superclassName equals: b superclassName.
 	self assert: a traitCompositionString equals: b traitCompositionString.

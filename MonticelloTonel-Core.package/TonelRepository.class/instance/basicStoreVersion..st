@@ -1,5 +1,4 @@
-accessing
+storing
 basicStoreVersion: aVersion
-  TonelWriter 
-	fileOut: aVersion 
-	on: self directory
+
+	TonelWriter fileOut: aVersion on: self directory

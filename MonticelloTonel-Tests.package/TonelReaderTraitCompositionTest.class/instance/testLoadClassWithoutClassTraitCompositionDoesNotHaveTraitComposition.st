@@ -2,7 +2,6 @@ tests
 testLoadClassWithoutClassTraitCompositionDoesNotHaveTraitComposition
 	
 	| classDefinition |
-
 	classDefinition := self 
 		readDefinitionOfClass: 'SomeObject' 
 		fromPackage: 'MonticelloTonel-Tests'
@@ -13,4 +12,4 @@ testLoadClassWithoutClassTraitCompositionDoesNotHaveTraitComposition
 	#category : #Kernel
 }' ].
 
-	self deny: classDefinition hasClassTraitComposition.
+	self deny: classDefinition hasClassTraitComposition

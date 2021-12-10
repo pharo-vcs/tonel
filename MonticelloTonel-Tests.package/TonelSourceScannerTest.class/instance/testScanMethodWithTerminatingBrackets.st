@@ -1,7 +1,7 @@
 tests
 testScanMethodWithTerminatingBrackets
-	| scanner |
-	
+
+	| scanner |	
 	scanner := TonelSourceScanner on: '[[''-.*$'']]' readStream.
 	self 
 		assert: scanner scan 

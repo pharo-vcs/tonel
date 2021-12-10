@@ -1,6 +1,7 @@
 tests
 testMethodDef
-	self 
+
+	self
 		assertParse: '
 { #category: ''accessing'' }
 Object>>name [

@@ -1,4 +1,4 @@
 private
 expectedBinaryInstanceMethodSourceCode
 
-	self subclassResponsibility
+	^ self subclassResponsibility

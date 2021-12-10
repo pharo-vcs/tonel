@@ -1,5 +1,6 @@
 tests
 assertMethodDefinition: a and: b
+
 	self assert: a className equals: b className.
 	self assert: a selector equals: b selector.
 	self assert: a protocol equals: b protocol.

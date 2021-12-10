@@ -1,3 +1,5 @@
 utilities
 default
-    ^ DiskStore activeClass createDefault defaultWorkingDirectory asFileReference
+
+	^ DiskStore activeClass createDefault defaultWorkingDirectory
+		  asFileReference

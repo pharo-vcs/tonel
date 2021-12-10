@@ -1,8 +1,7 @@
 tests
 checkFilesStructureIn: aFileReference
 
-	| nl |
-	
+	| nl |	
 	self assert: (aFileReference / 'MonticelloTonel-Tests-Mocks') exists.
 	self 
 		assert: ((aFileReference / 'MonticelloTonel-Tests-Mocks') entries collect: #basename) 
