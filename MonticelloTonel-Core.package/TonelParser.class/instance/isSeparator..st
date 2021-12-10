@@ -1,3 +1,4 @@
-private testing
-isSeparator: aCharacter 
+private - testing
+isSeparator: aCharacter
+
 	^ aCharacter isSeparator

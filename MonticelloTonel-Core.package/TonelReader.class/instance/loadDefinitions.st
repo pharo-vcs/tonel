@@ -1,5 +1,6 @@
 loading
 loadDefinitions
+
 	| definitionOrders newDefinitions newCategories organization |
 	
 	definitionOrders := self class definitionOrders.

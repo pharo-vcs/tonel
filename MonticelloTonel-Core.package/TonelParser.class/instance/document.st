@@ -1,8 +1,6 @@
 parsing
 document
+
 	^ { 
-	self typeDef.
-	self methodDefList.
-	 } 
-	flattened
-	select: #notNil
+		  self typeDef.
+		  self methodDefList } flattened select: #notNil

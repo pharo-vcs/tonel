@@ -1,5 +1,6 @@
 private
 expectedMTMockClassAClassSt
+
 	^ '"
 A mock class to verify serialization using Tonel format
 "

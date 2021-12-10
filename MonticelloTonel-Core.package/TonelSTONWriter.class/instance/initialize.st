@@ -1,5 +1,6 @@
 initialization
 initialize
+
 	super initialize.
 	self prettyPrint: true.
-	aliases := { OrderedDictionary -> nil } asDictionary
+	aliases := { (OrderedDictionary -> nil) } asDictionary

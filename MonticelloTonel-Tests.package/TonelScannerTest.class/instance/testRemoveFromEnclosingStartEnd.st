@@ -1,7 +1,7 @@
 tests
 testRemoveFromEnclosingStartEnd
-	| scanner nl |
-	
+
+	| scanner nl |	
 	nl := String cr.
 	scanner := TonelScanner basicNew.
 	self 

@@ -1,3 +1,4 @@
 accessing
-stream: aStream 
+stream: aStream
+
 	stream := aStream

@@ -1,3 +1,4 @@
 utilities
 readStreamFor: filePath do: aBlock
-    self subclassResponsibility
+
+	self subclassResponsibility

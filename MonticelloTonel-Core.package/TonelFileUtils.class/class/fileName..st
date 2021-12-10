@@ -1,3 +1,4 @@
 utilities
 fileName: aDirectory
-    self subclassResponsibility
+
+	self subclassResponsibility

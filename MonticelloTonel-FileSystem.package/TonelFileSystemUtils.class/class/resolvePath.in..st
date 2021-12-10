@@ -1,3 +1,4 @@
 utilities
 resolvePath: path in: aDirectory
-    ^ aDirectory resolveString: path
+
+	^ aDirectory resolveString: path

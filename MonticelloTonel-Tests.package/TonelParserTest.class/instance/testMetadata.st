@@ -1,5 +1,6 @@
 tests
 testMetadata
+
 	self 
 		assertParse: '{ #vars: [ #a, #b ] }' 
 		rule: #metadata 

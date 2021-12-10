@@ -1,3 +1,4 @@
 accessing
 start
+
 	^ self document

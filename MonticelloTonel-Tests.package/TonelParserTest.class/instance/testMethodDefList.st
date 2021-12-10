@@ -1,7 +1,7 @@
 tests
 testMethodDefList
-	| parsed |
-	
+
+	| parsed |	
 	parsed := self 
 		parse: '
 Object class>>new [

@@ -1,3 +1,4 @@
 actions
 readStreamForFileNamed: aString do: aBlock
-    ^ aBlock value: self directory
+
+	^ aBlock value: self directory

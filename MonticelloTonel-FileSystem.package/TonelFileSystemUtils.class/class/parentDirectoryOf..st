@@ -1,3 +1,4 @@
 utilities
 parentDirectoryOf: aDirectory
-    ^ aDirectory parent
+
+	^ aDirectory parent

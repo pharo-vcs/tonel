@@ -1,3 +1,4 @@
 utilities
 directoryPathString: aDirectory
-    self subclassResponsibility
+
+	self subclassResponsibility

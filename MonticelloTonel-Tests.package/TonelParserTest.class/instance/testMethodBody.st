@@ -1,5 +1,6 @@
 tests
 testMethodBody
+
 	self 
 		assertParse: '[ method body... I will ignore what is inside ]'
 		rule: #methodBody

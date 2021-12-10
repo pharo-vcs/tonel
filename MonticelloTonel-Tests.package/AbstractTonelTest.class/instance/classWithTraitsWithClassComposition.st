@@ -1,4 +1,4 @@
-utils
+utilities
 classWithTraitsWithClassComposition
 
 	^ classWithTraitsWithClassComposition ifNil: [

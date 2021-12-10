@@ -1,4 +1,4 @@
 private - accessing
 actualClass
 
-	self subclassResponsibility
+	^ self subclassResponsibility

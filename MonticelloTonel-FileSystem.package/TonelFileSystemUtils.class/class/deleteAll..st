@@ -1,3 +1,4 @@
 utilities
 deleteAll: aDirectory
-    ^ aDirectory deleteAll
+
+	^ aDirectory deleteAll

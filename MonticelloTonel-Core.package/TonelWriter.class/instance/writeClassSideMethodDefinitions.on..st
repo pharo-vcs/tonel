@@ -1,4 +1,4 @@
-private writing
+private - writing
 writeClassSideMethodDefinitions: aClassDefinition on: aStream
 	((snapshot definitions 
 		select: [ :each | 
