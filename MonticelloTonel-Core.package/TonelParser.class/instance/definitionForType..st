@@ -1,4 +1,4 @@
-private factory
+private - factory
 definitionForType: aString
 	aString = TonelWriter classLabel ifTrue: [ ^ MCClassDefinition ].
 	aString = TonelWriter traitLabel ifTrue: [ ^ MCTraitDefinition ].

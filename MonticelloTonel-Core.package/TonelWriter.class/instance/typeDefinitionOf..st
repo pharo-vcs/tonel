@@ -1,4 +1,4 @@
-private definitions
+private - definitions
 typeDefinitionOf: aClassDefinition
 
 	(self isTrait: aClassDefinition)

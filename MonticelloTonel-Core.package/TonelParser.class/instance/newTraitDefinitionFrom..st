@@ -1,4 +1,4 @@
-private factory
+private - factory
 newTraitDefinitionFrom: anArray
 	| metadata traitDefs |
 
