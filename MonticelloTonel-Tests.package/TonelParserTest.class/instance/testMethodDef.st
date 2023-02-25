@@ -1,6 +1,6 @@
 tests
 testMethodDef
-	self 
+	self
 		assertParse: '
 { #category: ''accessing'' }
 Object>>name [
@@ -11,14 +11,14 @@ Object>>name [
 			className: #Object
 			classIsMeta: false
 			selector: #name
-			category: 'accessing' 
+			category: 'accessing'
 			timeStamp: nil
 			source: 'name
 	^ self printString').
-			
-	self 
+
+	self
 		assertParse: '
-Object class>>name [ 
+Object class>>name [
 	^ self printString
 ]'
 		rule: #methodDef
@@ -28,12 +28,12 @@ Object class>>name [
 			selector: #name
 			category: ''
 			timeStamp: nil
-			source: 'name 
+			source: 'name
 	^ self printString').
 
-	self 
+	self
 		assertParse: '
-TClass classSide >> template: aSystemCategoryName [ 
+TClass classSide >> template: aSystemCategoryName [
 	"I really do not care"
 ]'
 		rule: #methodDef
@@ -43,5 +43,5 @@ TClass classSide >> template: aSystemCategoryName [
 			selector: #template:
 			category: ''
 			timeStamp: nil
-			source: 'template: aSystemCategoryName 
-	"I really do not care"').
+			source: 'template: aSystemCategoryName
+	"I really do not care"')

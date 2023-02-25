@@ -1,5 +1,5 @@
 running
-setUp 
-	
+setUp
+
 	super setUp.
 	classesAndTraits := OrderedCollection new

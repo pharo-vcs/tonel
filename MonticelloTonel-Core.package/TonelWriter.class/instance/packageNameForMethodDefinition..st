@@ -1,7 +1,7 @@
 private
 packageNameForMethodDefinition: aMethodDefinition
 	| category |
-	
+
 	self assert: aMethodDefinition category first = $*.
 	category := aMethodDefinition category allButFirst.
 	^(MCWorkingCopy allManagers

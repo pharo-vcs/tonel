@@ -4,4 +4,3 @@ prepareToScan
 	isFinished := false.
 	char := prevChar := nil.
 	count := 0
-	

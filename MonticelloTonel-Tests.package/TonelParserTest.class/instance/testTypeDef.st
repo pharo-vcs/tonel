@@ -1,14 +1,14 @@
 tests
 testTypeDef
-	self 
+	self
 		assertParse: '
 "
 this is a test
 "
-Class { 
+Class {
 	#name: ''X'',
 	#superclass: ''Y'',
-	#category: ''Z'' 
+	#category: ''Z''
 }'
 		rule: #typeDef
 		equals: (MCClassDefinition

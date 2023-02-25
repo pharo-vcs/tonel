@@ -1,13 +1,13 @@
 parsing
 metadata
 	| result ch count |
-	
+
 	result := String new writeStream.
 
 	count := 0.
-	stream peek = ${ ifFalse: [ TonelParseError signal: 'Can''t parse metadata' ].	
+	stream peek = ${ ifFalse: [ TonelParseError signal: 'Can''t parse metadata' ].
 	[ stream atEnd ]
-	whileFalse: [ 
+	whileFalse: [
 		ch := stream next.
 		result nextPut: ch.
 		ch = ${ ifTrue: [ count := count +1 ].

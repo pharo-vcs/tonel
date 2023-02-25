@@ -1,24 +1,24 @@
 scanning
 scan
 	| result ch eatNext |
-	
+
 	result := String new writeStream.
 
 	eatNext := false.
-	stream next = $" ifFalse: [ TonelParseError signal: 'Can''t parse comment' ].	
-	[ stream atEnd not 
-		and: [ 
-				(ch := stream next) ~= $" 
+	stream next = $" ifFalse: [ TonelParseError signal: 'Can''t parse comment' ].
+	[ stream atEnd not
+		and: [
+				(ch := stream next) ~= $"
 				or: [ eatNext := (stream peek = $") ] ] ]
-	whileTrue: [ 
+	whileTrue: [
 		result nextPut: ch.
-		eatNext ifTrue: [ 
+		eatNext ifTrue: [
 			stream skip: 1.
 			eatNext := false ] ].
-	
-	self flag: #todo. "This is a hack to make my clean algoritm for bodies work also for 
+
+	self flag: #todo. "This is a hack to make my clean algoritm for bodies work also for
 	comments. I need to refactor the 'eat enter' part out to use just that."
-	^ self 
+	^ self
 		removeFrom: '"',result contents,'"' withInternalLineEndings
-		enclosingStart: $" 
+		enclosingStart: $"
 		end: $"

@@ -22,7 +22,7 @@ testWriteClassDefinitionWithTraitComposition
 	self
 		assert: stream contents
 		equals:
-			(self expectedClassDefinitionWithTraitCompositionSourceCode 
+			(self expectedClassDefinitionWithTraitCompositionSourceCode
 				 withLineEndings: OSPlatform current lineEnding).
 
 	stream := String new writeStream.
@@ -43,5 +43,5 @@ testWriteClassDefinitionWithTraitComposition
 	self
 		assert: stream contents
 		equals:
-			(self expectedSomeObjectClassDefinitionWithVariablesSourceCode 
+			(self expectedSomeObjectClassDefinitionWithVariablesSourceCode
 				 withLineEndings: OSPlatform current lineEnding)

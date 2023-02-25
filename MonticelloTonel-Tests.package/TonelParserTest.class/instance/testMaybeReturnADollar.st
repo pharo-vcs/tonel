@@ -1,6 +1,6 @@
 tests
 testMaybeReturnADollar
-    self 
+    self
         assertParse: '[self testSomething ifTrue: [^$$]]'
         rule: #methodBody
-        equals: 'self testSomething ifTrue: [^$$]'.
+        equals: 'self testSomething ifTrue: [^$$]'

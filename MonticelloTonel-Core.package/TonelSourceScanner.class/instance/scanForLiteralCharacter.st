@@ -1,5 +1,5 @@
 scanning
 scanForLiteralCharacter
-	self isStartingLiteralCharacter ifFalse: [ ^ false ]. 
+	self isStartingLiteralCharacter ifFalse: [ ^ false ].
 	self readNext.
 	^true

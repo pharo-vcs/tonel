@@ -1,4 +1,4 @@
 private
 expectedClassDefinitionWithTraitCompositionFromRealClassSourceCode
 
-	self subclassResponsibility 
+	self subclassResponsibility

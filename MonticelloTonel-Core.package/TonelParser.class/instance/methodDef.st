@@ -1,9 +1,9 @@
 parsing
 methodDef
-	^ self newMethodDefinitionFrom: { 
+	^ self newMethodDefinitionFrom: {
 		self separator.
 		self try: [ self metadata ].
-		self separator. 
-		self method. 
-		self methodBody 
+		self separator.
+		self method.
+		self methodBody
 	}

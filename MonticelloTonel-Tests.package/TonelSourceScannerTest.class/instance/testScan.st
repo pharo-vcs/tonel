@@ -4,17 +4,17 @@ testScan
 
 	scanner := TonelSourceScanner on: '[^'''']' readStream.
 	self assert: scanner scan equals: '^'''''.
-	
+
 	scanner := TonelSourceScanner on: '[
-	self 
+	self
 		at: Object1 put: ''one string'';
 		at: Object2 put: ''other string'';
 		yourself
 ]' readStream.
-	self 
-		assert: scanner scan 
+	self
+		assert: scanner scan
 		equals: '
-	self 
+	self
 		at: Object1 put: ''one string'';
 		at: Object2 put: ''other string'';
 		yourself'

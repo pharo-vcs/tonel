@@ -1,4 +1,4 @@
 private
 skipSeparators: aStream
 	[ aStream peek isSeparator ]
-	whileTrue: [ aStream skip: 1 ]. 
+	whileTrue: [ aStream skip: 1 ].

@@ -1,7 +1,7 @@
 private factory
 basicNewTraitDefinitionFrom: anArray
 	| metadata |
-	
+
 	metadata := anArray sixth.
 
 	^ MCTraitDefinition

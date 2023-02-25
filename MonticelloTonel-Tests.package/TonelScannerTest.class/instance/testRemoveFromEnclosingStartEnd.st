@@ -1,41 +1,41 @@
 tests
 testRemoveFromEnclosingStartEnd
 	| scanner nl |
-	
+
 	nl := String cr.
 	scanner := TonelScanner basicNew.
-	self 
-		assert: (scanner 
-			removeFrom: '[ ^ self ]'  
-			enclosingStart: $[ 
+	self
+		assert: (scanner
+			removeFrom: '[ ^ self ]'
+			enclosingStart: $[
 			end: $])
 		equals: '^ self'.
-		
-	self 
-		assert: (scanner 
-			removeFrom: ('[ 
-	^ self ]' withLineEndings: nl) 
-			enclosingStart: $[ 
+
+	self
+		assert: (scanner
+			removeFrom: ('[
+	^ self ]' withLineEndings: nl)
+			enclosingStart: $[
 			end: $])
 		equals: Character tab asString, '^ self'.
-	
-	self 
-		assert: (scanner 
-			removeFrom: ('[ 
+
+	self
+		assert: (scanner
+			removeFrom: ('[
 	^ self
 	]' withLineEndings: nl)
-			enclosingStart: $[ 
+			enclosingStart: $[
 			end: $])
 		equals: Character tab asString, '^ self'.
-		
-	self 
-		assert: (scanner 
-			removeFrom: ('[ 
+
+	self
+		assert: (scanner
+			removeFrom: ('[
 
 	^ self
 
 ]' withLineEndings: nl)
-			enclosingStart: $[ 
+			enclosingStart: $[
 			end: $])
 		equals: (('
 	^ self

@@ -32,5 +32,5 @@ testWriteClassDefinitionWithClassTraitCompositionFromRealClassShouldWriteIt
 	self
 		assert: stream contents
 		equals:
-			(self expectedSomeObjectClassDefinitionWithVariablesSourceCode 
+			(self expectedSomeObjectClassDefinitionWithVariablesSourceCode
 				 withLineEndings: OSPlatform current lineEnding)

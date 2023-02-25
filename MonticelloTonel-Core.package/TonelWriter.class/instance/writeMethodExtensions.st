@@ -2,16 +2,14 @@ writing
 writeMethodExtensions
 	| classesAndMethods |
 	classesAndMethods := Dictionary new.
-	snapshot definitions 
+	snapshot definitions
 		select: [ :each | each isMethodDefinition and: [ each isExtensionMethod ] ]
-		thenDo: [ :each | 
-			(classesAndMethods 
+		thenDo: [ :each |
+			(classesAndMethods
 				at: each className
 				ifAbsentPut: [ Set new ])
 				add: each ].
-	classesAndMethods keysAndValuesDo: [ :className :methods | 
-		self 
-			writeExtensionMethods: methods 
+	classesAndMethods keysAndValuesDo: [ :className :methods |
+		self
+			writeExtensionMethods: methods
 			className: className ]
-		
-	

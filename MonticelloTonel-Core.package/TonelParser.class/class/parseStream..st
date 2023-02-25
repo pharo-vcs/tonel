@@ -1,3 +1,3 @@
 parsing
-parseStream: aStream 
+parseStream: aStream
 	^ (self on: aStream) start

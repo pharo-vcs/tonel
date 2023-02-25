@@ -17,5 +17,5 @@ testWriteUnaryInstanceMethodDefinitionWithDotNextToSelector
 	self
 		assert: stream contents
 		equals:
-			(self expectedUnaryInstanceMethodWithDotAfterSelectorSourceCode 
+			(self expectedUnaryInstanceMethodWithDotAfterSelectorSourceCode
 				 withLineEndings: OSPlatform current lineEnding)
