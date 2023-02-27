@@ -1,7 +1,7 @@
 tests
 testLoadSelectorWithComments
 
-	self withTonelWriterClassesDo: [ :writerClass | 
+	self withTonelWriterClassesDo: [ :writerClass |
 		| snapshot mem reader |
 		snapshot := self mockSnapshotWithCommentsInSelector.
 		mem := self

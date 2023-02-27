@@ -1,6 +1,6 @@
 tests
 testMethodBodyWithSquareBracketInsideLiteralArray2
-    self 
+    self
         assertParse: '[^#( "note that we need to prefix ) with $, but this is not necessary for ] and }" '')]}'' $) ] } )]'
         rule: #methodBody
-        equals: '^#( "note that we need to prefix ) with $, but this is not necessary for ] and }" '')]}'' $) ] } )'.
+        equals: '^#( "note that we need to prefix ) with $, but this is not necessary for ] and }" '')]}'' $) ] } )'

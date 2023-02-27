@@ -1,3 +1,3 @@
 parsing
-parseString: aString 
+parseString: aString
 	^ self parseStream: aString readStream

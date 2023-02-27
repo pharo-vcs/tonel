@@ -1,14 +1,14 @@
 scanning
 scan
-	self prepareToScan.	
+	self prepareToScan.
 	stream peek = $[ ifFalse: [ TonelParseError signal: 'Can''t parse method body' ].
 	[ stream atEnd or: [ isFinished ] ]
 	whileFalse: [ self scanNextChunk ].
-	isFinished ifTrue: [ 
+	isFinished ifTrue: [
 		"clean up to return"
-		^ self 
+		^ self
 			removeFrom: result contents withInternalLineEndings
-			enclosingStart: $[ 
+			enclosingStart: $[
 			end: $]
 			clean: #right ].
 

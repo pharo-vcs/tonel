@@ -2,10 +2,10 @@ scanning
 scanForBlock
 	| match |
 	match := false.
-	char = $[ ifTrue: [ 
+	char = $[ ifTrue: [
 		count := count + 1.
 		match := true ].
-	char = $] ifTrue: [ 
+	char = $] ifTrue: [
 		count := count - 1.
 		match := true ].
 	isFinished := count = 0.

@@ -1,7 +1,7 @@
 scanning
 scanForLiteralArray
 	| literalCount |
-	self isStartingLiteralArray ifFalse: [ ^ false ]. 
+	self isStartingLiteralArray ifFalse: [ ^ false ].
 	literalCount := 1.
 	self readUntil: [
 		self scanForLiteralCharacter

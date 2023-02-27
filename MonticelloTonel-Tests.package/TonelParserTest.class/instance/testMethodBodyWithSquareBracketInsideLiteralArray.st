@@ -1,6 +1,6 @@
 tests
 testMethodBodyWithSquareBracketInsideLiteralArray
-    self 
+    self
         assertParse: '[ "What about this valid literal Array guys" ^#( [ )]'
         rule: #methodBody
-        equals: ' "What about this valid literal Array guys" ^#( [ )'.
+        equals: ' "What about this valid literal Array guys" ^#( [ )'

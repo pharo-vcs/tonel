@@ -1,6 +1,6 @@
 scanning
 scanNextChunk
-	self readNext.	
+	self readNext.
 	self scanForBlock or: [
 	self scanForComment or: [
 	self scanForString or: [

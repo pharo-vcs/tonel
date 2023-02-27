@@ -1,5 +1,5 @@
 instance creation
-on: aStream 
-	^ self new 
+on: aStream
+	^ self new
 		stream: aStream;
 		yourself

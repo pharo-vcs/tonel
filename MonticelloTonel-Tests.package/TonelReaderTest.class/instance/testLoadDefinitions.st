@@ -1,7 +1,7 @@
 tests
 testLoadDefinitions
 
-	self withTonelWriterClassesDo: [ :writerClass | 
+	self withTonelWriterClassesDo: [ :writerClass |
 		| snapshot mem reader |
 		snapshot := self mockSnapshot.
 		mem := self

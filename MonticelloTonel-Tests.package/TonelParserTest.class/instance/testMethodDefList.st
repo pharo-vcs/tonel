@@ -1,8 +1,8 @@
 tests
 testMethodDefList
 	| parsed |
-	
-	parsed := self 
+
+	parsed := self
 		parse: '
 Object class>>new [
 	^ self basicNew initialize
@@ -15,7 +15,7 @@ Object>>name [
 
 { #category: ''printing'' }
 Object>>printOn: aStream [
-	"Append to the argument, aStream, a sequence of characters that  
+	"Append to the argument, aStream, a sequence of characters that
 	identifies the receiver."
 
 	| title |
@@ -26,5 +26,5 @@ Object>>printOn: aStream [
 
 ]'
 		rule: #methodDefList.
-		
+
 	self assert: parsed size equals: 3

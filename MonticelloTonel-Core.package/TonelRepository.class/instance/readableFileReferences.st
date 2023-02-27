@@ -1,6 +1,6 @@
 accessing
 readableFileReferences
-	^ self readableFileNames collect: [ :each | 
-		self fileUtils 
-			directoryFromPath: each 
+	^ self readableFileNames collect: [ :each |
+		self fileUtils
+			directoryFromPath: each
 			relativeTo: self directory ]

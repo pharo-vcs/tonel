@@ -1,6 +1,6 @@
-private definitions
+private - definitions
 commentOf: aClassDefinition
-	^ (aClassDefinition comment 
-		copyReplaceAll: '"' 
+	^ (aClassDefinition comment
+		copyReplaceAll: '"'
 		with: '""')
 		withLineEndings: self newLine

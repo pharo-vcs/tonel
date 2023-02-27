@@ -1,7 +1,7 @@
 accessing
 definitionOrders
 	"Used to sort definitions inside a snapshot"
-	^ Dictionary newFromPairs: { 
+	^ Dictionary newFromPairs: {
 		MCOrganizationDefinition. 	0.
 		MCMethodDefinition. 			1.
 		MCClassDefinition. 			2.

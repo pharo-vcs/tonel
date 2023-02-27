@@ -9,5 +9,5 @@ testWriteTraitDefinitionWithTraitCompositionFromTrait
 
 	writer writeClassDefinition: def on: stream.
 	self assert: stream contents equals: (self
-			 expectedClassDefinitionWithTraitCompositionFromRealClassSourceCode 
+			 expectedClassDefinitionWithTraitCompositionFromRealClassSourceCode
 			 withLineEndings: OSPlatform current lineEnding)

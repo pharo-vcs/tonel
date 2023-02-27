@@ -1,4 +1,4 @@
-private definitions
+private - definitions
 methodDefinitionOf: aMethodDefinition
 
 	| definition |

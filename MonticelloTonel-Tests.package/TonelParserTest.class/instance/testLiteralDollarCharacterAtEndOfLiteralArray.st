@@ -1,6 +1,6 @@
 tests
 testLiteralDollarCharacterAtEndOfLiteralArray
-    self 
+    self
         assertParse: '[^#($$)]'
         rule: #methodBody
-        equals: '^#($$)'.
+        equals: '^#($$)'

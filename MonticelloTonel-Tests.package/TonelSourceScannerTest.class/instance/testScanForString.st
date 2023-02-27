@@ -4,58 +4,58 @@ testScanForString
 
 	scanner := TonelSourceScanner on: '''-.*$''' readStream.
 	scanner prepareToScan.
-	scanner readNext. 
+	scanner readNext.
 	scanner scanForString.
-	self 
+	self
 		assert: ((scanner instVarNamed: 'result') contents)
-		equals: '''-.*$'''.	
-	
+		equals: '''-.*$'''.
+
 	scanner := TonelSourceScanner on: '''simple comment ''''with'''' colons enclosing word''' readStream.
 	scanner prepareToScan.
-	scanner readNext. 
+	scanner readNext.
 	scanner scanForString.
-	self 
+	self
 		assert: ((scanner instVarNamed: 'result') contents)
-		equals: '''simple comment ''''with'''' colons enclosing word'''.	
-	
+		equals: '''simple comment ''''with'''' colons enclosing word'''.
+
 	scanner := TonelSourceScanner on: '''''' readStream.
 	scanner prepareToScan.
-	scanner readNext. 
+	scanner readNext.
 	scanner scanForString.
-	self 
-		assert: ((scanner instVarNamed: 'result') contents) 
-		equals: ''''''.	
+	self
+		assert: ((scanner instVarNamed: 'result') contents)
+		equals: ''''''.
 
 	scanner := TonelSourceScanner on: '''simple string''' readStream.
 	scanner prepareToScan.
-	scanner readNext. 
+	scanner readNext.
 	scanner scanForString.
-	self 
+	self
 		assert: ((scanner instVarNamed: 'result') contents)
-		equals: '''simple string'''.	
+		equals: '''simple string'''.
 
-	scanner := TonelSourceScanner on: '''multiline 
+	scanner := TonelSourceScanner on: '''multiline
 string''' readStream.
 	scanner prepareToScan.
-	scanner readNext. 
+	scanner readNext.
 	scanner scanForString.
-	self 
+	self
 		assert: ((scanner instVarNamed: 'result') contents)
-		equals: '''multiline 
-string'''.	
+		equals: '''multiline
+string'''.
 
 	scanner := TonelSourceScanner on: '''simple string with '''' colons inside''' readStream.
 	scanner prepareToScan.
-	scanner readNext. 
+	scanner readNext.
 	scanner scanForString.
-	self 
+	self
 		assert: ((scanner instVarNamed: 'result') contents)
-		equals: '''simple string with '''' colons inside'''.	
+		equals: '''simple string with '''' colons inside'''.
 
 	scanner := TonelSourceScanner on: '''simple string with colons at the end''''' readStream.
 	scanner prepareToScan.
-	scanner readNext. 
+	scanner readNext.
 	scanner scanForString.
-	self 
+	self
 		assert: ((scanner instVarNamed: 'result') contents)
 		equals: '''simple string with colons at the end'''''

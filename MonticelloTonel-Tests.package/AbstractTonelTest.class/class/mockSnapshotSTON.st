@@ -4,7 +4,7 @@ mockSnapshotSTON
 	#definitions : [
 		MCOrganizationDefinition {
 			#categories : [
-				#''MonticelloTonel-Tests-Mocks'' 
+				#''MonticelloTonel-Tests-Mocks''
 			]
 		},
 		MCClassDefinition {

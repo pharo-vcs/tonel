@@ -6,10 +6,10 @@ writeExtensionMethods: methods className: className
 	self fileUtils
 		writeStreamFor: className , '.extension.st'
 		in: self packageDir
-		do: [ :s | 
+		do: [ :s |
 			| definition |
 			definition := Dictionary new.
 			self at: #name put: className in: definition.
 			s << 'Extension ' << (self toSTON: definition) << nl.
-			(methods sorted: [ :a :b | a selector < b selector ]) do: [ :each | 
+			(methods sorted: [ :a :b | a selector < b selector ]) do: [ :each |
 				self writeMethodDefinition: each on: s ] ]

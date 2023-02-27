@@ -1,5 +1,5 @@
 running
-tearDown 
-	
+tearDown
+
 	classesAndTraits reverse do: [ :aClassOrTrait | aClassOrTrait removeFromSystem ].
-	super tearDown.
+	super tearDown

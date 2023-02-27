@@ -1,7 +1,7 @@
 tests
 testHiddenFilesAreIgnored
 
-	self withTonelWriterClassesDo: [ :writerClass | 
+	self withTonelWriterClassesDo: [ :writerClass |
 		| snapshot mem reader |
 		snapshot := self mockSnapshot.
 		mem := self

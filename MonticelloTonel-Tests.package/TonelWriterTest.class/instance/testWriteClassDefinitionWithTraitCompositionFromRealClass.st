@@ -9,7 +9,7 @@ testWriteClassDefinitionWithTraitCompositionFromRealClass
 
 	writer writeClassDefinition: def on: stream.
 	self assert: stream contents equals: (self
-			 expectedClassDefinitionWithTraitCompositionFromRealClassSourceCode 
+			 expectedClassDefinitionWithTraitCompositionFromRealClassSourceCode
 			 withLineEndings: OSPlatform current lineEnding).
 
 	stream := String new writeStream.
@@ -30,5 +30,5 @@ testWriteClassDefinitionWithTraitCompositionFromRealClass
 	self
 		assert: stream contents
 		equals:
-			(self expectedSomeObjectClassDefinitionWithVariablesSourceCode 
+			(self expectedSomeObjectClassDefinitionWithVariablesSourceCode
 				 withLineEndings: OSPlatform current lineEnding)

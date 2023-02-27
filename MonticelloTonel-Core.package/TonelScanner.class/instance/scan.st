@@ -1,3 +1,3 @@
 scanning
-scan 
+scan
 	self subclassResponsibility
