@@ -1,4 +1,4 @@
 private
 createDefaultOrganizationFromDefinition: aMethodDefinition
 
-	^ MCOrganizationDefinition categories: (self packageNameForMethodDefinition: aMethodDefinition)
+	^ MCOrganizationDefinition packageName: (self packageNameForMethodDefinition: aMethodDefinition)
