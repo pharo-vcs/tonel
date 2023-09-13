@@ -1,5 +1,6 @@
 tests
 testTypeDef
+
 	self
 		assertParse: '
 "
@@ -11,16 +12,8 @@ Class {
 	#category: ''Z''
 }'
 		rule: #typeDef
-		equals: (MCClassDefinition
-        name: 'X'
-        superclassName: 'Y'
-        traitComposition: '{}'
-        classTraitComposition: '{}'
-        category: 'Z'
-        instVarNames: #()
-        classVarNames: #()
-        poolDictionaryNames: #()
-        classInstVarNames: #()
-        type: #normal
-        comment: 'this is a test'
-        commentStamp: nil)
+		equals: ((MCClassDefinition named: 'X')
+				 superclassName: 'Y';
+				 packageName: 'Z';
+				 comment: 'this is a test';
+				 yourself)
