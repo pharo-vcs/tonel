@@ -13,6 +13,7 @@ Class {
 		''Y''
 	],
 	#category : ''MonticelloTonel-Tests-Mocks-Base'',
+	#package : ''MonticelloTonel-Tests-Mocks'',
 	#tag : ''Base''
 }
 

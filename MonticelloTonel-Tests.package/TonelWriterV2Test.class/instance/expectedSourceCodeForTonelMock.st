@@ -11,6 +11,7 @@ Class {
 	#name : ''TonelMock'',
 	#superclass : ''Object'',
 	#category : ''MonticelloTonel-Tests-Mocking'',
+	#package : ''MonticelloTonel-Tests'',
 	#tag : ''Mocking''
 }
 

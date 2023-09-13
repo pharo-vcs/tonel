@@ -31,6 +31,7 @@ typeClassDefinitionOf: aClassDefinition
 
 	self at: #category put: aClassDefinition category in: definition.
 
+	self at: #package put: aClassDefinition packageName in: definition.
 	aClassDefinition tagName ifNotNil: [ :tagName | self at: #tag put: tagName in: definition ].
 
 	^ self toSTON: definition

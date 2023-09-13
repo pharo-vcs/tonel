@@ -9,6 +9,7 @@ Class {
 	#superclass : #Object,
 	#traits : ''T1 + T2'',
 	#classTraits : ''T1 classTrait + T2 classTrait'',
-	#category : #Kernel
+	#category : #Kernel,
+	#package : #Kernel
 }
 '

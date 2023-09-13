@@ -7,6 +7,7 @@ comment test
 Class {
 	#name : ''SomeObject'',
 	#superclass : ''Object'',
-	#category : ''Kernel''
+	#category : ''Kernel'',
+	#package : ''Kernel''
 }
 '
