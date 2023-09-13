@@ -4,7 +4,7 @@ ensurePackagesAndTagsOfDefinitions: aCollectionOfDefinition
 	In case we have the legacy format, the parser set the whole category as the package name and here we will check with the folder name what part is the package and what part is the tag name."
 
 	| packageName |
-	packageName := self packageNameFromPackageDirectory.
+	packageName := self package name.
 
 	aCollectionOfDefinition
 		select: [ :definition | definition isClassDefinition ]

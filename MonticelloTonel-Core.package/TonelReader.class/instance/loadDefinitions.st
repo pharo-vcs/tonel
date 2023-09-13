@@ -1,7 +1,7 @@
 loading
 loadDefinitions
 
-	| definitionOrders newDefinitions newCategories organization |
+	| definitionOrders newDefinitions tagNames |
 	definitionOrders := self class definitionOrders.
 	newDefinitions := ((self packageDirectory entries select: [ :each | self canBeLoaded: each ]) collect: [ :each |
 		                   each readStreamDo: [ :s | TonelParser parseStream: s ] ]) flattened sort: [ :a :b |
@@ -9,8 +9,9 @@ loadDefinitions
 
 	self ensurePackagesAndTagsOfDefinitions: newDefinitions.
 
-	newCategories := self categoriesFrom: newDefinitions.
-	(newCategories includes: self package name asSymbol) ifFalse: [ newCategories := newCategories copyWithFirst: self package name ].
-	organization := MCOrganizationDefinition categories: newCategories.
+	tagNames := newDefinitions
+		            select: #isClassDefinition
+		            thenCollect: #tagName.
+	tagNames := tagNames asSet reject: [ :tag | tag isNil ].
 
-	definitions := (newDefinitions copyWithFirst: organization) sort
+	definitions := (newDefinitions copyWith: (MCOrganizationDefinition packageName: self package name tagNames: tagNames)) sort
