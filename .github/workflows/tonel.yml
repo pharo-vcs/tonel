@@ -15,15 +15,15 @@ jobs:
     strategy:
       matrix:
         os: [ ubuntu-latest ]
-        smalltalk: [ Pharo64-10 ]
+        smalltalk: [ Pharo64-12 ]
     runs-on: ${{ matrix.os }}
     name: ${{ matrix.smalltalk }} on ${{ matrix.os }}
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Setup smalltalkCI
         uses: hpi-swa/setup-smalltalkCI@v1
         with:
-          smalltalk-version: ${{ matrix.smalltalk }}
+          smalltalk-image: ${{ matrix.smalltalk }}
       - name: Load Image and Run Tests
         run: smalltalkci -s ${{ matrix.smalltalk }}
         env:
