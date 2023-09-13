@@ -12,7 +12,8 @@ Class {
 	#classVars : [
 		''Y''
 	],
-	#category : ''MonticelloTonel-Tests-Mocks-Base''
+	#category : ''MonticelloTonel-Tests-Mocks-Base'',
+	#tag : ''Base''
 }
 
 { #category : ''class initialization'' }

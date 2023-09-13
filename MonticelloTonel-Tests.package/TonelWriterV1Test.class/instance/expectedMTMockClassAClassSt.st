@@ -13,7 +13,8 @@ Class {
 		''CVar'',
 		''InitializationOrder''
 	],
-	#category : #''MonticelloTonel-Tests-Mocks-Base''
+	#category : #''MonticelloTonel-Tests-Mocks-Base'',
+	#tag : #Base
 }
 
 { #category : #accessing }
