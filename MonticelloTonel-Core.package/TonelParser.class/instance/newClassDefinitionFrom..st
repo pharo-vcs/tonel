@@ -1,18 +1,22 @@
 private - factory
 newClassDefinitionFrom: anArray
 
-	| metadata |
+	| metadata definition |
 	metadata := anArray sixth.
-	^ (MCClassDefinition named: (metadata at: #name))
-		  superclassName: (metadata at: #superclass);
-		  traitComposition: (metadata at: #traits ifAbsent: [ '{}' ]);
-		  classTraitComposition: (metadata at: #classTraits ifAbsent: [ '{}' ]);
-		  category: (metadata at: #category);
-		  instVarNames: (metadata at: #instVars ifAbsent: [ #(  ) ]);
-		  classVarNames: (metadata at: 'classVars' ifAbsent: [ #(  ) ]);
-		  poolDictionaryNames: (metadata at: 'pools' ifAbsent: [ #(  ) ]);
-		  classInstVarNames: (metadata at: 'classInstVars' ifAbsent: [ #(  ) ]);
-		  type: (metadata at: #type ifAbsent: [ #normal ]) asSymbol;
-		  comment: (anArray second ifNil: [ '' ]);
-		  commentStamp: nil;
-		  yourself
+	definition := (MCClassDefinition named: (metadata at: #name))
+		              superclassName: (metadata at: #superclass);
+		              comment: (anArray second ifNil: [ '' ]);
+		              yourself.
+
+	metadata
+		at: #traits ifPresent: [ :composition | definition traitComposition: composition ];
+		at: #classTraits ifPresent: [ :composition | definition classTraitComposition: composition ];
+		at: #instVars ifPresent: [ :ivar | definition instVarNames: ivar ];
+		at: #classVars ifPresent: [ :classVar | definition classVarNames: classVar ];
+		at: #pools ifPresent: [ :pools | definition poolDictionaryNames: pools ];
+		at: #classInstVars ifPresent: [ :classIVar | definition classInstVarNames: classIVar ];
+		at: #type ifPresent: [ :type | definition type: type asSymbol ].
+
+	self addPackageInfoTo: definition from: metadata.
+
+	^ definition

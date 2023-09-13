@@ -1,13 +1,18 @@
 private - factory
 basicNewTraitDefinitionFrom: anArray
 
-	| metadata |
+	| metadata definition |
 	metadata := anArray sixth.
-	^ (MCTraitDefinition named: (metadata at: #name))
-		  traitComposition: (metadata at: #traits ifAbsent: [ '{}' ]);
-		  category: (metadata at: #category);
-		  instVarNames: (metadata at: #instVars ifAbsent: [ #(  ) ]);
-		  classInstVarNames: (metadata at: #classInstVars ifAbsent: [ #(  ) ]);
-		  classTraitComposition: (metadata at: #classTraits ifAbsent: [ '{}' ]);
-		  comment: (anArray second ifNil: [ '' ]);
-		  commentStamp: nil
+	definition := (MCTraitDefinition named: (metadata at: #name))
+		              comment: (anArray second ifNil: [ '' ]);
+		              yourself.
+
+	metadata
+		at: #traits ifPresent: [ :composition | definition traitComposition: composition ];
+		at: #classTraits ifPresent: [ :composition | definition classTraitComposition: composition ];
+		at: #instVars ifPresent: [ :ivar | definition instVarNames: ivar ];
+		at: #classInstVars ifPresent: [ :classIVar | definition classInstVarNames: classIVar ].
+
+	self addPackageInfoTo: definition from: metadata.
+
+	^ definition
