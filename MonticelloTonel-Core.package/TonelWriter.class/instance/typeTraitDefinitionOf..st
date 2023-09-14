@@ -6,23 +6,13 @@ typeTraitDefinitionOf: aClassDefinition
 	self at: #name put: aClassDefinition className in: definition.
 
 	aClassDefinition variables isEmptyOrNil ifFalse: [
-		(aClassDefinition variables
-			 select: #isInstanceVariable
-			 thenCollect: #name) ifNotEmpty: [ :vars |
-			definition at: #instVars put: vars asArray ].
-		(aClassDefinition variables
-			 select: #isClassInstanceVariable
-			 thenCollect: #name) ifNotEmpty: [ :vars |
-			definition at: #classInstVars put: vars asArray ] ].
+		aClassDefinition instVarNames ifNotEmpty: [ :vars | definition at: #instVars put: vars asArray ].
+		aClassDefinition classInstVarNames ifNotEmpty: [ :vars | definition at: #classInstVars put: vars asArray ] ].
 
-	aClassDefinition hasTraitComposition ifTrue: [
-		definition at: #traits put: aClassDefinition traitCompositionString ].
+	aClassDefinition hasTraitComposition ifTrue: [ definition at: #traits put: aClassDefinition traitCompositionString ].
 
-	aClassDefinition hasClassTraitComposition ifTrue: [
-		definition
-			at: #classTraits
-			put: aClassDefinition classTraitCompositionString ].
+	aClassDefinition hasClassTraitComposition ifTrue: [ definition at: #classTraits put: aClassDefinition classTraitCompositionString ].
 
-	self at: #category put: aClassDefinition category in: definition.
+	self setPackageInfoOf: aClassDefinition in: definition.
 
 	^ self toSTON: definition
