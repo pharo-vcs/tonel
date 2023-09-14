@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "TonelWriterTest",
+	"category" : "MonticelloTonel-Tests-Base",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "TonelWriterV3Test",
+	"type" : "normal"
+}

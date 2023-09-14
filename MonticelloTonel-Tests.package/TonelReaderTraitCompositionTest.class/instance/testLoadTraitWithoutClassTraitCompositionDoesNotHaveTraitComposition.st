@@ -2,14 +2,10 @@ tests
 testLoadTraitWithoutClassTraitCompositionDoesNotHaveTraitComposition
 
 	| classDefinition |
-
-	classDefinition := self
-		readDefinitionOfClass: 'SomeTrait'
-		fromPackage: 'MonticelloTonel-Tests'
-		whitContent: [ :s | s <<
-'Trait {
+	classDefinition := self readDefinitionOfClass: 'SomeTrait' fromPackage: 'Kernel' whitContent: 'Trait {
 	#name : #SomeTrait,
-	#category : #Kernel
-}' ].
+	#category : #Kernel,
+	#package : #Kernel
+}'.
 
 	self deny: classDefinition hasClassTraitComposition

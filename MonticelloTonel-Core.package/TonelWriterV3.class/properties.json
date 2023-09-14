@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "CyrilFerlicot 9/14/2023 14:10",
+	"super" : "TonelWriter",
+	"category" : "MonticelloTonel-Core-Writing",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [
+		"IsLegacyFormat"
+	],
+	"instvars" : [ ],
+	"name" : "TonelWriterV3",
+	"type" : "normal"
+}

@@ -3,9 +3,7 @@ mockSnapshotSTONWithCommentsInSelector
 	^ 'MCSnapshot {
 	#definitions : [
 		MCOrganizationDefinition {
-			#categories : [
-				#''MonticelloTonel-Tests-Mocks''
-			]
+			#packageName : #''MonticelloTonel-Tests-Mocks''
 		},
 		MCClassDefinition {
 			#name : #MTMockASubclass,
@@ -18,7 +16,7 @@ mockSnapshotSTONWithCommentsInSelector
 					#name : ''Y''
 				}
 			],
-			#category : #''MonticelloTonel-Tests-Mocks'',
+			#packageName : #''MonticelloTonel-Tests-Mocks'',
 			#type : #normal,
 			#comment : '''',
 			#commentStamp : '''',
