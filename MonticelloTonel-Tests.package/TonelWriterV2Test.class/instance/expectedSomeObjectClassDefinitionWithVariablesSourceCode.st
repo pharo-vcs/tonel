@@ -22,7 +22,6 @@ Class {
 	#classInstVars : [
 		''instVarA''
 	],
-	#category : ''Kernel'',
-	#package : ''Kernel''
+	#category : ''Kernel''
 }
 '
