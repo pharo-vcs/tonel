@@ -1,4 +1,1 @@
-SystemOrganization addCategory: #'MonticelloTonel-Tests-Mocking'!
-SystemOrganization addCategory: #'MonticelloTonel-Tests-Mocking-MonticelloTonel-Tests'!
-SystemOrganization addCategory: #'MonticelloTonel-Tests-Mocking-MonticelloTonel-Tests-Base'!
-SystemOrganization addCategory: #'MonticelloTonel-Tests-Mocking-MonticelloTonel-Tests-Resources'!
+self packageOrganizer ensurePackage: #'MonticelloTonel-Tests-Mocking-MonticelloTonel-Tests' withTags: #('Base' #'MonticelloTonel-Tests-Mocking' 'Resources')!
