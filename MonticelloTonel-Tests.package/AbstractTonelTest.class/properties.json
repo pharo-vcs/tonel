@@ -5,13 +5,7 @@
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [
-		"classesAndTraits",
-		"classWithTraits",
-		"trait1",
-		"trait2",
-		"classWithTraitsWithClassComposition"
-	],
+	"instvars" : [ ],
 	"name" : "AbstractTonelTest",
 	"type" : "normal"
 }
