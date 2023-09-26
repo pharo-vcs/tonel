@@ -1,18 +1,15 @@
 private - factory
 newTraitDefinitionFrom: anArray
 
-	| metadata traitDefs |
+	| metadata definition |
 	metadata := anArray sixth.
-	traitDefs := { (self basicNewTraitDefinitionFrom: anArray) }.
-
-	traitDefs first hasClassTraitComposition ifTrue: [
-		| definition |
-		definition := (MCClassTraitDefinition baseTraitName: (metadata at: #name))
-			              classTraitComposition: (metadata at: #classTraits);
-			              yourself.
-
-		self addPackageInfoTo: definition from: metadata.
-
-		traitDefs := traitDefs copyWith: definition ].
-
-	^ traitDefs
+	definition := (MCTraitDefinition named: (metadata at: #name))
+		              comment: (anArray second ifNil: [ '' ]);
+		              yourself.
+	metadata
+		at: #traits ifPresent: [ :composition | definition traitComposition: composition ];
+		at: #classTraits ifPresent: [ :composition | definition classTraitComposition: composition ];
+		at: #instVars ifPresent: [ :ivar | definition instVarNames: ivar ];
+		at: #classInstVars ifPresent: [ :classIVar | definition classInstVarNames: classIVar ].
+	self addPackageInfoTo: definition from: metadata.
+	^ definition

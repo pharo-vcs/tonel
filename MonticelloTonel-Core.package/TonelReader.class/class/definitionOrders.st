@@ -5,5 +5,4 @@ definitionOrders
 		MCOrganizationDefinition. 	0.
 		MCMethodDefinition. 			1.
 		MCClassDefinition. 			2.
-		MCTraitDefinition. 			2.
-		MCClassTraitDefinition. 		3 }
+		MCTraitDefinition. 			2}
