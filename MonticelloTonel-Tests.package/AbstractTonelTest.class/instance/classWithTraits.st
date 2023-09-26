@@ -2,12 +2,11 @@ utils
 classWithTraits
 
 	^ classWithTraits ifNil: [
-			classWithTraits := Object
-				subclass: #SomeObject
-				uses: self trait1 + self trait2
-				slots:  #()
-				classVariables: ''
-				poolDictionaries: ''
-				package: #'MonticelloTonel-Tests'.
-			classesAndTraits add: classWithTraits.
-			classWithTraits ]
+		  classWithTraits := self class classInstaller make: [ :aBuilder |
+			                     aBuilder
+				                     name: #SomeObject;
+				                     superclass: Object;
+				                     traitComposition: self trait1 + self trait2;
+				                     package: #'MonticelloTonel-Tests' ].
+		  classesAndTraits add: classWithTraits.
+		  classWithTraits ]
