@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "CyrilFerlicot 9/26/2023 12:01",
+	"super" : "TestResource",
+	"category" : "MonticelloTonel-Tests-Base",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"classesAndTraits",
+		"classWithTraits",
+		"trait1",
+		"trait2",
+		"classWithTraitsWithClassComposition"
+	],
+	"name" : "TonelTestResource",
+	"type" : "normal"
+}
