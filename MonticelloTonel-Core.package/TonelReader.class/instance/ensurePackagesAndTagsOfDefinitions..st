@@ -9,11 +9,11 @@ ensurePackagesAndTagsOfDefinitions: aCollectionOfDefinition
 	aCollectionOfDefinition
 		select: [ :definition | definition isClassDefinition ]
 		thenDo: [ :classDefinition |
-			classDefinition packageName = packageName ifFalse: [
-				(classDefinition packageName beginsWith: packageName , '-')
+			(classDefinition packageName sameAs: packageName) ifFalse: [
+				(classDefinition packageName beginsWith: packageName , '-' caseSensitive: false)
 					ifTrue: [
 						classDefinition
-							tagName: (classDefinition packageName withoutPrefix: packageName , '-');
+							tagName: (classDefinition packageName allButFirst: packageName size + 1);
 							packageName: packageName ]
 					ifFalse: [
 						self error:
