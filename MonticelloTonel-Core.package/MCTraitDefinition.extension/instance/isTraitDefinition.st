@@ -1,3 +1,0 @@
-*MonticelloTonel-Core
-isTraitDefinition
-	^ true
