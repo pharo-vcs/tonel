@@ -1,5 +1,6 @@
 tests
-assertDefinition: a and: b
-	a isOrganizationDefinition ifTrue: [ ^ self assertOrganisationDefinition: a and: b ].
-	a isClassDefinition ifTrue: [ ^ self assertClassDefinition: a and: b ].
-	a isMethodDefinition ifTrue: [ ^ self assertMethodDefinition: a and: b ]
+assertDefinition: actualDefinition and: expectedDefinition
+
+	actualDefinition isOrganizationDefinition ifTrue: [ ^ self assertOrganisationDefinition: actualDefinition and: expectedDefinition ].
+	actualDefinition isClassDefinition ifTrue: [ ^ self assertClassDefinition: actualDefinition and: expectedDefinition ].
+	actualDefinition isMethodDefinition ifTrue: [ ^ self assertMethodDefinition: actualDefinition and: expectedDefinition ]

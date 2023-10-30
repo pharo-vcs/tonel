@@ -1,3 +1,5 @@
 tests
-assertOrganisationDefinition: a and: b
-	self assert: a categories equals: b categories
+assertOrganisationDefinition: actualDefinition and: expectedDefinition
+
+	self assert: actualDefinition packageName equals: expectedDefinition packageName.
+	self assert: actualDefinition tagNames equals: expectedDefinition tagNames

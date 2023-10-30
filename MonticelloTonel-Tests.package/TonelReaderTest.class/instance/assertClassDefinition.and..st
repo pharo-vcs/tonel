@@ -1,13 +1,14 @@
 tests
-assertClassDefinition: a and: b
-	self assert: a className equals: b className.
-	self assert: a superclassName equals: b superclassName.
-	self assert: a traitCompositionString equals: b traitCompositionString.
-	self assert: a classTraitCompositionString equals: b classTraitCompositionString.
-	self assert: a category equals: b category.
-	self assert: a instVarNames equals: b instVarNames.
-	self assert: a classInstVarNames equals: b classInstVarNames.
-	self assert: a classVarNames equals: b classVarNames.
-	self assert: a poolDictionaries equals: b poolDictionaries.
-	self assert: a type equals: b type.
-	self assert: a comment equals: b comment
+assertClassDefinition: actualDefinition and: expectedDefinition
+	self assert: actualDefinition className equals: expectedDefinition className.
+	self assert: actualDefinition superclassName equals: expectedDefinition superclassName.
+	self assert: actualDefinition traitCompositionString equals: expectedDefinition traitCompositionString.
+	self assert: actualDefinition classTraitCompositionString equals: expectedDefinition classTraitCompositionString.
+	self assert: actualDefinition packageName equals: expectedDefinition packageName.
+	self assert: actualDefinition tagName equals: expectedDefinition tagName.
+	self assert: actualDefinition instVarNames equals: expectedDefinition instVarNames.
+	self assert: actualDefinition classInstVarNames equals: expectedDefinition classInstVarNames.
+	self assert: actualDefinition classVarNames equals: expectedDefinition classVarNames.
+	self assert: actualDefinition poolDictionaries equals: expectedDefinition poolDictionaries.
+	self assert: actualDefinition type equals: expectedDefinition type.
+	self assert: actualDefinition comment equals: expectedDefinition comment
