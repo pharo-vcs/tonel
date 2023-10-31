@@ -1,7 +1,7 @@
 private
 packageNameForMethodDefinition: aMethodDefinition
 
-	| category |
-	self assert: aMethodDefinition category first = $*.
-	category := aMethodDefinition category allButFirst.
-	^ (MCWorkingCopy allWorkingCopies detect: [ :wc | category sameAs: wc packageName ]) packageName
+	| protocol |
+	self assert: aMethodDefinition protocol first = $*.
+	protocol := aMethodDefinition protocol allButFirst.
+	^ (MCWorkingCopy allWorkingCopies detect: [ :wc | protocol sameAs: wc packageName ]) packageName

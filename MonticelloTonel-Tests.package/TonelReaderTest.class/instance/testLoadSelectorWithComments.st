@@ -16,4 +16,4 @@ testLoadSelectorWithComments
 
 		reader definitions sorted
 			with: snapshot definitions sorted
-			do: [ :a :b | self assertDefinition: a and: b ] ]
+			do: [ :actualDefinition :expectedDefinition | self assertDefinition: actualDefinition and: expectedDefinition ] ]

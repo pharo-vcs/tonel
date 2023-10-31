@@ -1,7 +1,8 @@
 tests
-assertMethodDefinition: a and: b
-	self assert: a className equals: b className.
-	self assert: a selector equals: b selector.
-	self assert: a protocol equals: b protocol.
-	self assert: a source asByteArray equals: b source asByteArray.
-	self assert: a classIsMeta equals: b classIsMeta
+assertMethodDefinition: actualDefinition and: expectedDefinition
+
+	self assert: actualDefinition className equals: expectedDefinition className.
+	self assert: actualDefinition selector equals: expectedDefinition selector.
+	self assert: actualDefinition protocol equals: expectedDefinition protocol.
+	self assert: actualDefinition source asByteArray equals: expectedDefinition source asByteArray.
+	self assert: actualDefinition classIsMeta equals: expectedDefinition classIsMeta
