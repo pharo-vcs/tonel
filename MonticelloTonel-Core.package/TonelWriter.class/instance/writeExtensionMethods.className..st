@@ -11,5 +11,5 @@ writeExtensionMethods: methods className: className
 			definition := Dictionary new.
 			self at: #name put: className in: definition.
 			s << 'Extension ' << (self toSTON: definition) << nl.
-			(methods sorted: [ :a :b | a selector < b selector ]) do: [ :each |
-				self writeMethodDefinition: each on: s ] ]
+			(methods sorted: [ :a :b | a selector < b selector or: [ a selector = b selector and: [ a classIsMeta ] ] ])
+				do: [ :each | self writeMethodDefinition: each on: s ] ]
