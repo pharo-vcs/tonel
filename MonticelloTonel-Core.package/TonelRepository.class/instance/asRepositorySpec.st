@@ -1,5 +1,5 @@
 accessing
-asRepositorySpecFor: aMetacelloMCProject
+asRepositorySpec
 
 	^ (MetacelloRepositorySpec description: self description)
 		  type: 'tonel';
