@@ -4,9 +4,10 @@ loadDefinitions
 	| definitionOrders newDefinitions tagNames |
 	definitionOrders := self class definitionOrders.
 
-	newDefinitions := ((self packageDirectory entries select: [ :file | self canBeLoaded: file ]) collect: [ :file | self parseTonelFile: file ]) flattened sort: [
-		                  :a
-		                  :b | (definitionOrders at: a class) < (definitionOrders at: b class) ].
+	newDefinitions := ((self packageDirectory entries
+		                    select: [ :file | self canBeLoaded: file ]
+		                    thenCollect: [ :file | self parseTonelFile: file onError: [ nil ] ]) flattened reject: [ :file | file isNil "discard errored" ]) sort: [ :a :b |
+		                  (definitionOrders at: a class) < (definitionOrders at: b class) ].
 
 	self ensurePackagesAndTagsOfDefinitions: newDefinitions.
 
