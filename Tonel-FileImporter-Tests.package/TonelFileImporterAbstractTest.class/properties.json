@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "TestCase",
+	"category" : "Tonel-FileImporter-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"fileSystem"
+	],
+	"name" : "TonelFileImporterAbstractTest",
+	"type" : "normal"
+}
