@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "Object",
+	"category" : "Tonel-FileImporter",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"fileReference",
+		"contents",
+		"definitions"
+	],
+	"name" : "TonelFileImporter",
+	"type" : "normal"
+}

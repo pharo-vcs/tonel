@@ -1,1 +1,1 @@
-SystemOrganization addCategory: #BaselineOfTonel!
+self packageOrganizer ensurePackage: #BaselineOfTonel withTags: #()!

@@ -8,12 +8,14 @@ baseline: spec
 				package: #'MonticelloTonel-Core';
 				package: #'MonticelloTonel-FileSystem' with: [ spec requires: #('MonticelloTonel-Core') ];
 				package: #'MonticelloTonel-Tests-Mocks';
-				package: #'MonticelloTonel-Tests' with: [ spec requires: #('MonticelloTonel-Core' 'MonticelloTonel-Tests-Mocks') ].
+				package: #'MonticelloTonel-Tests' with: [ spec requires: #('MonticelloTonel-Core' 'MonticelloTonel-Tests-Mocks') ];
+				package: #'Tonel-FileImporter' with: [ spec requires: #('MonticelloTonel-Core') ];
+				package: #'Tonel-FileImporter-Tests' with: [ spec requires: #('Tonel-FileImporter') ].
 			spec
 				group: 'default' with: #('core' 'tests');
 				group: 'mocks' with: #('MonticelloTonel-Tests-Mocks');
-				group: 'core' with: #('MonticelloTonel-Core' 'MonticelloTonel-FileSystem');
-				group: 'tests' with: #('MonticelloTonel-Tests') ].
+				group: 'core' with: #('MonticelloTonel-Core' 'MonticelloTonel-FileSystem' 'Tonel-FileImporter');
+				group: 'tests' with: #('MonticelloTonel-Tests' 'Tonel-FileImporter-Tests') ].
 
 	spec for: #(#'pharo4.x' #'pharo5.x' #'pharo6.x' #'pharo7.x') do: [
 		self ston: spec.

@@ -1,0 +1,4 @@
+*Tonel-FileImporter
+isMethodDeclaration
+
+	^ true
