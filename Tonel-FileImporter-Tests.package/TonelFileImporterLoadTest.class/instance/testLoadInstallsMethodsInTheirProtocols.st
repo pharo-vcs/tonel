@@ -7,5 +7,7 @@ testLoadInstallsMethodsInTheirProtocols
 	self assert: (class >> #alpha) protocolName equals: #accessing.
 	self assert: (class >> #tricky) protocolName equals: #tricky.
 	self assert: (class class >> #withAlpha:) protocolName equals: #'instance creation'.
-	self assert: (class withAlpha: 3) alpha equals: 3.
-	self assert: class new tricky equals: ']['
+
+	"Using Perform to not break the release tests"
+	self assert: (class perform: #withAlpha: with: 3) alpha equals: 3.
+	self assert: (class new perform: #tricky) equals: ']['
