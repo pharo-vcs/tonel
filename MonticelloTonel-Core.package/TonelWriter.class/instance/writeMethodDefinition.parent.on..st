@@ -10,5 +10,5 @@ writeMethodDefinition: aMethodDefinition parent: aClassDefinition on: aStream
 			aStream
 				<< nl
 				<< (self methodDefinitionOf: aMethodDefinition) << nl
-				<< fullClassName << ' >> ' << methodDeclaration
-				<< ' [' << methodBody << nl << ']' << nl ]
+				<< fullClassName << ' >> ' << methodDeclaration.
+			self writeMethodBody: methodBody on: aStream ]

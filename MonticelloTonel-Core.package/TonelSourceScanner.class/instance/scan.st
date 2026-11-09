@@ -1,6 +1,18 @@
 scanning
 scan
 	self prepareToScan.
+	stream peek = $! ifTrue: [
+		"Robust mode, source use a *chunk* format. existing ! are escaped (doubled)"
+		stream next.
+		^ (String streamContents: [ :str |
+			| ch |
+			[	ch := stream peek.
+				ch ~= $! or: [ 
+					stream next.
+					ch := stream peek.
+					ch = $! ] ]
+			whileTrue: [ str nextPut: stream next ] ] ) withInternalLineEndings ].
+
 	stream peek = $[ ifFalse: [ TonelParseError signal: 'Can''t parse method body' ].
 	[ stream atEnd or: [ isFinished ] ]
 	whileFalse: [ self scanNextChunk ].
